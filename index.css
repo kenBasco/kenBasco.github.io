@@ -3,9 +3,16 @@
   src: url(fonts/Clarendon-Bold.woff);
 }
 
+html, body {
+  margin: 0;
+  /** Possibly padding too **/
+  padding: 0;
+}
+
 body
 {
   background-color: #b1331b; //#b1313b,b13b31,b13b13,#b31139
+
 }
 
 h1
@@ -34,7 +41,10 @@ p
 {
   font-family: clarendonBold;
 
+  position: sticky;
+  top: 0;
 
+  width: 100%;
 
 }
 
@@ -42,10 +52,13 @@ p
 {
 
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   overflow: hidden;
   background-color: #333;
+  white-space:nowrap;
+
+
 
 
 }
@@ -58,7 +71,7 @@ p
 .nav1  li a
 {
 
-  display: block;
+display: inline-block;
  color: white;
  text-align: center;
  padding: 14px 16px;
