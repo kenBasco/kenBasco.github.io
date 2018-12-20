@@ -1,14 +1,73 @@
-body {
+@font-face {
+  font-family: clarendonBold;
+  src: url(fonts/Clarendon-Bold.woff);
+}
+
+body
+{
   background-color: #b1331b; //#b1313b,b13b31,b13b13,#b31139
 }
 
-h1 {
+h1
+{
+
+  font-family: arial ;
   color: white;
+  font-style: strong;
+  font-size: 500%;
 
 }
 
-p {
-  font-family: verdana;
+p
+{
+  font-family: clarendonBold;
+  color: #ffffff;
   font-size: 20px;
 }
-<meta charset="utf-8">
+
+.blk
+{
+  color: black;
+}
+
+.nav1
+{
+  font-family: clarendonBold;
+
+
+
+}
+
+.nav1 ul
+{
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+
+}
+
+.nav1  li
+{
+  float: left;
+}
+
+.nav1  li a
+{
+
+  display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+
+}
+
+.nav1 li a:hover
+{
+
+    background-color: #111;
+}
