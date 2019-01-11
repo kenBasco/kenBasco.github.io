@@ -20,14 +20,16 @@ var context = canvas.getContext('2d');
 
 
 
-function doSearch()
+function doSearch(e)
 {
 
   var input = document.getElementById("userInput").value;
 
   if(input == 'game')
   {
+    e.preventDefault();
     playGame();
+    return false;
   }
 }
 
@@ -111,11 +113,11 @@ function playGame()
     rectangle.y_velocity *= 0.9;// friction
 
     // if rectangle is falling below floor line
-    if (rectangle.y > 180 - 16 - 32)
+    if (rectangle.y > 180 ) //originally (rectangle.y > 180 - 16 - 32)
     {
 
       rectangle.jumping = false;
-      rectangle.y = 180 - 16 - 32;
+      rectangle.y = 180 ;
       rectangle.y_velocity = 0;
 
     }
@@ -125,7 +127,7 @@ function playGame()
 
       rectangle.x = 320;
 
-    } else if (rectangle.x > 320) {// if rectangle goes past right boundary
+    } else if (rectangle.x > canvas.width) {// if rectangle goes past right boundary
 
       rectangle.x = -32;
 
@@ -140,8 +142,8 @@ function playGame()
     context.strokeStyle = "#202830";
     context.lineWidth = 4;
     context.beginPath();
-    context.moveTo(0, 164);
-    context.lineTo(320, 164);
+    context.moveTo(0, canvas.height);
+    context.lineTo(canvas.width, canvas.height);
     context.stroke();
 
     // call update when the browser is ready to draw again

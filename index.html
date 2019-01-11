@@ -66,11 +66,10 @@
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
   <div class="search-container">
-
-      <input type="text"  id="userInput">
-
-      <button type="submit" onclick= "doSearch()" ><i class="fa fa-search"></i></button>
-
+      <form onsubmit="return doSearch(event)">
+        <input type="text"  id="userInput">
+        <button type="submit"  ><i class="fa fa-search"></i></button>
+      </form>
   </div>
 </div>
 
