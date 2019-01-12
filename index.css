@@ -35,7 +35,7 @@ h1
   font-family: arial ;
   color: white;
   font-style: strong;
-  font-size: 900%;
+  font-size: 130%;
   line-height: 0px;
 }
 
@@ -63,7 +63,9 @@ p
 .blk
 {
   color: black;
+  font-size: 130%;
 }
+
 
 
 /* these (topnav) are the navigation bar styles */
@@ -73,11 +75,13 @@ p
   background-color: #333;
   font-family: clarendonBold;
   position: sticky;
+
   top:0;
 
-
+  bottom: 0;
   width: 100%;
 }
+
 
 .topnav a {
   float: left;
@@ -157,27 +161,13 @@ grid-template areas (i.e., item1 maps to header under grid template)
    grid-area: header;
    color: #fff;
    font-family: arial;
-   justify-items: stretch;
-   font-size: 700%;
-   line-height: 113px;
+
+   vertical-align: bottom;
+   position: relative;
+
+
 }
-.item2
-{
-  grid-area: ifob;
-  color: #fff;
-  font-family: arial;
-  justify-items: stretch;
-  font-size: 500%;
-  line-height: 50px;
-}
-.item3
-{
-  grid-area: ideas;
-  font-family: arial;
-  justify-items: stretch;
-  font-size: 700%;
-  line-height: 130px;
-}
+
 
 /*tlgwindow ins special because while items 1-3 are my header items,
 the tlgwindow is a container for my canvas object, where the 'game'
@@ -199,16 +189,14 @@ canvas
 .grid-container
 {
 
+  height:100vh;
+  font-size: 500%;
+  line-height: .9;
   font-weight: bold;
   display: grid;
   grid-template-areas:
-  'header game game '
-  'ifob game game'
-  'ideas game game';
-
-}
-
-.grid-container > div
-{
+  'game'
+  'header'
+  ;
 
 }
