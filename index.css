@@ -43,7 +43,7 @@ h1
   font-family: arial ;
   color: white;
   font-style: strong;
-  font-size: 900%;
+  font-size: 130%;
   line-height: 0px;
 }
 
@@ -72,7 +72,9 @@ p
 .blk
 {
   color: black;
+  font-size: 130%;
 }
+
 
 
 /* these (topnav) are the navigation bar styles */
@@ -89,6 +91,7 @@ p
   bottom: 0;
   width: 100%;
 }
+
 
 .topnav a {
   float: left;
@@ -218,6 +221,9 @@ canvas
 .grid-container
 {
 
+  height:100vh;
+  font-size: 500%;
+  line-height: .9;
   font-weight: bold;
   display: grid;
   height: 90vh;
