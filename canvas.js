@@ -113,11 +113,11 @@ function playGame()
     rectangle.y_velocity *= 0.9;// friction
 
     // if rectangle is falling below floor line
-    if (rectangle.y > 180 ) //originally (rectangle.y > 180 - 16 - 32)
+    if (rectangle.y > canvas.height - 33 ) //originally (rectangle.y > 180 - 16 - 32)
     {
 
       rectangle.jumping = false;
-      rectangle.y = 180 ;
+      rectangle.y = canvas.height - 33 ;
       rectangle.y_velocity = 0;
 
     }
