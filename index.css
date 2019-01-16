@@ -19,8 +19,14 @@ html, body {
 body
 {
 
-  background-color: #b1331b;
+  background-color: #000;
 
+}
+
+h1
+{
+  font-size: 9rem;
+  color: #fff;
 }
 
 /*
@@ -29,44 +35,47 @@ as your real header is the grid area items we'll see later (item1, item2..etc)
 
 */
 
-section
+#heading
 {
 
   display: block;
   box-sizing:border-box;
+  height: 93vh;
+  line-height: .9;
+  font-weight: bold;
+  background-color: #b1331b;
+  bord
+}
+
+#About
+{
   height: 100vh;
+  background-color: #000;
+
 }
 
-h1
+#Work
 {
 
-  font-family: arial ;
-  color: white;
-  font-style: strong;
-  font-size: 130%;
-  line-height: 0px;
+  height: 100vh;
+  background-color: #b1331b;
 }
 
-h2
+#Contact
 {
-  font-family: arial ;
-  color: white;
-  font-style: strong;
-  font-size: 500%;
+  height: 100vh;
+  background-color: #000;
 
 }
 
-header
-{
-  background-color: rgba(0, 0, 0, 0)
 
-}
+
 
 p
 {
   font-family: arial;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
 .blk
@@ -87,9 +96,11 @@ p
   position: sticky;
 
   top:0;
-
+  min-height: 50px;
   bottom: 0;
   width: 100%;
+  height: 7vh;
+  font-size: 3vh;
 }
 
 
@@ -98,9 +109,9 @@ p
   display: block;
   color: #fff;
   text-align: center;
-  padding: 14px 16px;
+  padding: /*14px 16px*/ 1em 1rem;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.3rem; /*used to be 17px*/
 }
 
 .topnav a:hover {
@@ -118,19 +129,23 @@ p
 }
 
 .topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
+
+  margin-top: .3em;
+  font-size: 1em;
+
 }
 
 .topnav .search-container button {
   float: right;
-  padding: 6px 10px;
+  font-size: .9em;
+  padding: .5em .9em;
+  /*padding: 6px 10px;
   margin-top: 8px;
   margin-right: 16px;
-  background: rgb(0,0,0,0);
   font-size: 17px;
+  */
+  background: rgb(0,0,0,0);
+
   border: none;
   cursor: pointer;
   color: white;
@@ -168,27 +183,17 @@ grid-template areas (i.e., item1 maps to header under grid template)
 
 .item1
 {
-   grid-area: kbbdi;
+
    color: #fff;
    font-family: arial;
-   justify-items: stretch;
-   font-size: 90px;
+   font-size: 10vh;
    margin:0;
    border:0;
+   height: 10vh;
+
    /*line-height: 113px; */
 }
 
-.item2
-{
-   grid-area: plchldr;
-   color: #fff;
-   font-family: arial;
-   justify-items: stretch;
-   font-size: 75px;
-   margin:0;
-   border:0;
-   /*line-height: 113px; */
-}
 
 .item3
 {
@@ -196,7 +201,8 @@ grid-template areas (i.e., item1 maps to header under grid template)
    color: #fff;
    font-family: arial;
    justify-items: stretch;
-   font-size: 60px;
+   font-size: 5vh;
+   height: 5vh;
    margin:0;
    border:0;
    /*line-height: 113px; */
@@ -206,37 +212,28 @@ the tlgwindow is a container for my canvas object, where the 'game'
 is gonna happen next to my header
 */
 
-.tlgwindow
-{
-  grid-area: game;
 
-}
 
 canvas
 {
   color: black;
-
+  height: 50vh;
 }
 
-.grid-container
+/*.grid-container
 {
 
   height:100vh;
   font-size: 500%;
   line-height: .9;
+
   font-weight: bold;
   display: grid;
-  height: 90vh;
   grid-template-areas:
 
   'kbbdi'
   'game'
-  'plchldr'
+
   ;
 
-}
-
-.grid-container > div
-{
-
-}
+} */
