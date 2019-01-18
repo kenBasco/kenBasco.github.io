@@ -6,40 +6,25 @@
       <link rel="stylesheet" href="test_1.css"/>
 
 
-      <script>
-
-        document.getElementById("demo").onmouseover = function() {mouseOver()};
-        document.getElementById("demo").onmouseout = function() {mouseOut()};
-
-        function mouseOver() {
-          document.getElementById("demo").style.color = "red";
-        }
-
-        function mouseOut() {
-          document.getElementById("demo").style.color = "black";
-        }
-
-
-      </script>
 
 
     </head>
     <body>
 
       <div id ="the text">
-      <h1 class="codes">
+      <h2 class="codes">
 
-<div id="methodcall">
+<div id="methodcall" onmouseover="mCon()" onmouseout="mCoff()">
   public int fibonacci(int n)
 </div>
   {
-    <div id="baseCase">
+    <div id="baseCase" onmouseover="bCon()" onmouseout="bCoff()" >
     if(n == 0)
         return 0;
     else if(n == 1)
       return 1;
     </div>
-  <div id="recStep">
+  <div id="recStep" onmouseover="rSon()" onmouseout="rSoff" >
    else
       return fibonacci(n - 1) + fibonacci(n - 2);
   </div>
@@ -47,12 +32,87 @@
 
 
 
-      </h1>
+      </h2>
+
+
+
+
+
+
+
+
+
+      <div id="mC">
+      method call is the function itself, it is called again in the recursive step
       </div>
 
-<div id ="rollover">
-      <p> rollover display </p>
-</div>
+      <div id="bC">
+      the base cases are terms '0' and '1' which return 1
+      </div>
+
+      <div id="rS">
+      this is the recursive step, here it calls sums the value returned from other calls with a modified parameter
+      </div>
+
+      <div id="boldthis"> mouse over lines to see annotation</div>
+
+      <script>
+
+
+
+        function mCon() {
+          var x = document.getElementById("mC");
+
+
+            x.style.display = "block";
+
+        }
+
+        function mCoff() {
+          var x = document.getElementById("mC");
+
+
+            x.style.display = "none";
+
+        }
+
+        function bCon() {
+          var x = document.getElementById("bC");
+
+            x.style.display = "block";
+
+        }
+
+        function bCoff() {
+          var x = document.getElementById("bC");
+
+            x.style.display = "none";
+
+        }
+
+        function rSon() {
+          var x = document.getElementById("rS");
+
+            x.style.display = "block";
+
+        }
+
+        function rSoff() {
+          var x = document.getElementById("rS");
+
+            x.style.display = "none";
+
+        }
+
+
+        rSoff();
+        mCoff();
+        bCoff();
+
+      </script>
+
+
+
 
     </body>
 
