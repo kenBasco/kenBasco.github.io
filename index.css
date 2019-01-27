@@ -7,20 +7,19 @@
   src: url(fonts/Clarendon-Light.woff);
 }
 
-/* removes the extra margins and padding*/
+/
+
+p
+{
+  font-family: arial;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+
 html, body {
   margin: 0;
   padding: 0;
-}
-
-/*background color is this signature red, other values to experiment are
-//#b1313b,b13b31,b13b13,#b31139 */
-
-body
-{
-
-  background-color: #000;
-
 }
 
 h1
@@ -30,78 +29,28 @@ h1
   font-family: clarendonBold;
 }
 
-/*
-h1 and h2 is your header, this is turned off for now
-as your real header is the grid area items we'll see later (item1, item2..etc)
-
-*/
-
-#heading
-{
-
-  display: block;
-  box-sizing:border-box;
-  height: 93vh;
-  line-height: .9;
-  font-weight: bold;
-  background-color: #b1331b;
-  bord
-}
-
-#About
-{
-  height: 100vh;
-  background-color: #000;
-
-}
-
-#Work
-{
-
-  height: 100vh;
-  background-color: #b1331b;
-}
-
-#Contact
-{
-  height: 100vh;
-  background-color: #000;
-
-}
-
-
-
-
-p
-{
-  font-family: arial;
-  color: #ffffff;
-  font-size: 1.3rem;
-}
-
-.blk
-{
-  color: black;
-  font-size: 130%;
-}
-
-
-
-/* these (topnav) are the navigation bar styles */
-
-
 .topnav {
   overflow: hidden;
+  background-color: #e9e9e9;
   background-color: #333;
   font-family: clarendonBold;
   position: sticky;
-
   top:0;
-  min-height: 50px;
   bottom: 0;
   width: 100%;
-  height: 7vh;
-  font-size: 3vh;
+  z-index: 1;
+
+
+  /*height width */
+
+}
+
+.fstuff
+{
+  background-color: rgba(0,0,0,0);
+  height:auto;
+  flex: 1;
+
 }
 
 
@@ -110,9 +59,13 @@ p
   display: block;
   color: #fff;
   text-align: center;
-  padding: /*14px 16px*/ 1em 1rem;
+  bottom: 0;
+ padding: 14px 16px;
+  /*  font-size: 17px; */
   text-decoration: none;
-  font-size: 1.3rem; /*used to be 17px*/
+  font-size: 1.3rem;
+
+
 }
 
 .topnav a:hover {
@@ -130,37 +83,34 @@ p
 }
 
 .topnav input[type=text] {
+ padding: 6px;
+  margin-top: 8px;
+  /*font-size: 17px;*/
+  font-size: 1.3rem;
 
-  margin-top: .3em;
-  font-size: 1em;
-
+  border: none;
 }
 
 .topnav .search-container button {
   float: right;
-  font-size: .9em;
-  padding: .5em .9em;
-  /*padding: 6px 10px;
+  padding: 6px 10px;
   margin-top: 8px;
   margin-right: 16px;
-  font-size: 17px;
-  */
-  background: rgb(0,0,0,0);
-
+  /*font-size: 17px; */
+  font-size: 1.3rem;
   border: none;
   cursor: pointer;
-  color: white;
+  background: rgb(0,0,0,0);
+  color: #fff;
 }
 
 .topnav .search-container button:hover {
   background: #ccc;
 }
 
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
+  .topnav a, .topnav input[type=text] {
     float: none;
     display: block;
     text-align: left;
@@ -175,14 +125,54 @@ p
 
 
 
-
-/*
-item1-3, and tlgwindow are gride area elements
-the grid-area property is their alias for the grid-container
-grid-template areas (i.e., item1 maps to header under grid template)
-*/
-
 .item1
+{
+	/*grid-area: header; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  top: 0;
+  background-color: #b1331b;
+  line-height: .9;
+}
+
+.item3
+{
+  grid-area: main;
+  height: 100vh;
+
+}
+.item4
+{
+  grid-area: right;
+  height: 100vh;
+  background-color: #b1331b;
+  border: 0px;
+ }
+.item5
+{
+  grid-area: left;
+  height: 100vh;
+  background-color: #b1331b;
+  border: 0px;
+}
+
+.item6
+{
+  grid-area: contact;
+  height: 100vh;
+}
+
+.item7
+{
+  grid-area: footer;
+  height: 100vh;
+}
+
+
+
+.kb
 {
 
    color: #fff;
@@ -192,11 +182,14 @@ grid-template areas (i.e., item1 maps to header under grid template)
    border:0;
    height: 10vh;
 
+
+
+
    /*line-height: 113px; */
 }
 
 
-.item3
+.subt
 {
 
    color: #fff;
@@ -208,33 +201,27 @@ grid-template areas (i.e., item1 maps to header under grid template)
    border:0;
    /*line-height: 113px; */
 }
-/*tlgwindow ins special because while items 1-3 are my header items,
-the tlgwindow is a container for my canvas object, where the 'game'
-is gonna happen next to my header
-*/
 
-
-
-canvas
-{
-  color: black;
-  height: 50vh;
-}
-
-/*.grid-container
-{
-
-  height:100vh;
-  font-size: 500%;
-  line-height: .9;
-
-  font-weight: bold;
+.grid-container {
   display: grid;
   grid-template-areas:
-
-  'kbbdi'
-  'game'
-
+/*  'header header ' */
+  'main main'
+  'left right'
+  'contact contact'
+  'footer footer'
   ;
+  grid-gap: 0px;
 
-} */
+
+}
+
+
+
+
+body
+{
+
+  background-color: #000;
+
+}
