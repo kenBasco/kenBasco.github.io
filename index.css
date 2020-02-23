@@ -140,6 +140,7 @@ h1
 {
   grid-area: main;
   height: 100vh;
+  background-color: #000;
 
 }
 .item4
@@ -161,6 +162,7 @@ h1
 {
   grid-area: contact;
   height: 75vh;
+  background-color: #000;
 }
 
 .item7
@@ -222,7 +224,7 @@ h1
 body
 {
 
-  background-color: #000;
+  background-color: #333;
 
 }
 
