@@ -12,7 +12,7 @@
 p
 {
   font-family: arial;
-  color: #ffffff;
+  color: #1b1b1b;
   font-size: 1.3rem;
 }
 
@@ -25,7 +25,7 @@ html, body {
 h1
 {
   font-size: 9rem;
-  color: #fff;
+  color: #1b1b1b;
   font-family: clarendonBold;
 }
 
@@ -132,7 +132,7 @@ h1
   flex-direction: column;
   font-weight: bold;
   top: 0;
-  background-color: #961231; /*was once #b1331b */
+  background-color: #fbfbfb; /*was once #b1331b */
   line-height: .9;
 }
 
@@ -147,14 +147,14 @@ h1
 {
   grid-area: right;
   height: 100vh;
-  background-color: #961231; /*was once #b1331b */
+  background-color: #fbfbfb; /*was once #b1331b */
   border: 0px;
  }
 .item5
 {
   grid-area: left;
   height: 100vh;
-  background-color: #961231; /*was once #b1331b */
+  background-color: #fbfbfb; /*was once #b1331b */
   border: 0px;
 }
 
