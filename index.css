@@ -147,14 +147,14 @@ h1
 {
   grid-area: right;
   height: 100vh;
-  background-color: #b1331b;
+  background-color: #961231; /*was once #b1331b */
   border: 0px;
  }
 .item5
 {
   grid-area: left;
   height: 100vh;
-  background-color: #b1331b;
+  background-color: #961231; /*was once #b1331b */
   border: 0px;
 }
 
