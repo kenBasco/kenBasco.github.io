@@ -1,0 +1,20 @@
+<!-- YOU DO NOT HAVE TO KNOW THIS, how the information
+is encoded but Computerphile's "Characters, Symbols and the Unicode Miracle"
+explains this well you can watch at: youtu.be/MijmeoH9LT4 -->
+
+<meta charset="utf-8">
+
+
+<li> (20 pts) make up your own project (examples on line 113) </li>
+
+<!--
+    EXAMPLE PROJECTS
+    ================
+
+    - Dating Profile for your OC (Original Character)
+    - Instructions for someone having a bad day
+    - List of Hopes and Fears
+    - A Manifesto
+    - A poem told in mixed media (pictures, lists, words)
+
+-->

@@ -1,67 +1,130 @@
-<!-- "!DOCTYPE" is NOT an html tag, this is information telling the browser
+<!-- "!DOCTYPE" is NOT an html element, this is information telling the browser
 this is an html file being read -->
 <!DOCTYPE html>
 
 <html>
 
-<!-- contains all meta information, or
-information ABOUT the document; This will NOT be seen on the page -->
-  <head>
+    <!--
+      <head> contains all meta information, or
+      information ABOUT the document; This will NOT be seen on the page
+    -->
+    <head>
+          <!--
+            references stylesheet
+            that decides how your page should look (fonts, sizing, colors, etc.),
+            more on this later -->
+          <link rel="stylesheet" href="minstyle.css">
 
-    <!-- YOU DO NOT HAVE TO KNOW THIS, how the information
-    is encoded but Computerphile's "Characters, Symbols and the Unicode Miracle"
-    explains this well you can watch at: youtu.be/MijmeoH9LT4 -->
-    <meta charset="utf-8">
-
-    <!-- gets the css file containing
-    the information of how your page should look (fonts, sizing, colors, etc.),
-     more on this later -->
-    <link rel="stylesheet" href="minstyle.css">
-
-    <!-- The name of this html file when downloaded, the
-    Title also displays in the tab https://www.are.na/block/6868369 -->
-    <title>Title of your Page</title>
-
-  </head>
-
-
-  <body> <!--  -->
-
-    <h1>Heading of The Page, Denotes the Name of the Page<h1>
-    <h2>Sub-header, Denotes Sections of the Page</h2>
-    <h3>Sub-sub header, Denotes sub-sections of the page</h3>
-
-      <p>
-
-        This is a paragraph, where text goes. You can talk about stuff like
-        what this page is about, persuade the user on an argument,
-        inform them about your day, talk about other content
-        on this page, etc.
-
-      </p>
+          <!--
+            The name of this html file when downloaded
+            (go ahead, try it, if you download this page it should ask you if you want to save it as "Title of you Page"), the
+            Title also displays in the tab https://www.are.na/block/6868369
+          -->
+          <title>Title of your Page</title>
+    </head>
 
 
+    <body> <!-- All the content the user will see-->
 
-      <ul>
+          <!--
+            - Headings (<h1>, <h2>, <h3>,...<h6>) are used to organize information by a table of contents for the webpage
+            - Headings display text according to size by hiearchy, so since h1 is the highest level, it will display the largest
+          -->
+            <h1>Heading of The Page</h1> <!-- title of webpage, usually displayed in largest text  -->
+            <h2>Sub-heading</h2> <!-- title of the section of webpage, usually displayed in larger text  -->
+            <h3>Sub-sub heading</h3> <!-- title of subsections of webpage, usually displayed in large text-->
 
-        <li>This is a list</li>
-        <li>usually each bullet on this list denotes different items</li>
-        <li>the list can be things like</li>
-        <li>links to other pages</li>
-        <li>or things to buy </li>
-        <li>but since I'm doing something experimental representing this information </li>
-        <li>each item on the list is a fragmented sentence talking about it</li>
+            <p> <!-- <p> element display text as a paragraph -->
+                  This is a paragraph, where text goes. You can talk about stuff like
+                  what this page is about, persuade the user on an argument,
+                  inform them about your day, talk about other content
+                  on this page, etc. Sometimes, you can <em>emphasize words like this.</em> <!--the <em> elements italicize text -->
+                  Other times, you can <strong>emphasize words like this</strong>.   <!-- the <strong> elements bold text -->
+            </p>
 
-      </ul>
+            <ul> <!-- <ul> elements denote a bullteted "Unordered" List  -->
+                  <li>this is a list</li>  <!-- <li> elements denote an item on this list -->
+                  <!-- the list can be things like -->
+                  <li>usually each bullet on this list denotes an item on the list</li> <!-- links to other pages -->
+                  <li>but since I'm doing something experimental representing this information </li> <!-- reasons to stay here -->
+                  <li>each item on the list is a fragmented sentence talking about it</li> <!-- or things to buy -->
+            </ul> <!-- <li> items of a list must go inbetween the <ul> elements-->
+
+            <!--
+              <img> does NOT need an end </> elements
+              instead, it has ATTRIBUTES ('src','alt', 'height', 'width' )
+              - 'src' is the image source. in this case, it is a url to an image on the internet
+              - 'alt' is the alternative text. It describes what the image is in case the user is visually impaired.
+              - 'height' and 'width' is how vertically and horizontally long you want your image to be in pixels
+            -->
+            <img src="https://d2w9rnfcy7mm78.cloudfront.net/6877189/large_1694f5ae68017d805f82f1438153cc21.png?1587010960?bc=0"
+            alt="black and white image of a person with short wavy hair's upper bust side-profile.
+            Their face is scrunched up screaming at the sky. A speech bubble is
+            crudely drawn out of the mouth of the man against the sky backdrop with
+            the words:'THIS IS AN IMAGE' in bolded black arial text inside it."
+            height="500" width="360">
+
+            <ol> <!-- <ol> elements denote a numbered "Ordered" List-->
+                  <li>this is also a list</li> <!-- Much like the unordered list, it is also composed of <li> -->
+                  <li>but it's different :^?</li> <!-- The difference is that each item is numbered -->
+                  <li>I wonder how</li> <!-- Usually used for giving directions or numbering items in general -->
+            </ol>
+<!-- ==================================================================================================================== -->
+            <hr> <!--<hr> is just a horizontal line, used to divide themeatic changes in a document -->
+
+            <h2>DIRECTIONS</h2>
+            <p>
+                Download this page and read through the code's comments saying
+               what each type of element does.
+            </p>
+
+            <p>
+                HTML comments are in the form of: < !-- this is a comment  -- > <br>
+                anything in between < !-- and -- > is ignored by the browser.
+            </p>
+            <p>
+                THEN in your code editor, do the following activity:
+            </p>
+
+            <h2> ACTIVITY </h2>
+            <p> Try to accumulate <em>13 pts</em> : </p>
+            <ul>
+                  <li> <em> (+1 pts)</em> EDIT existing html elements. (change what it says, content, etc.; i.e., make the heading element say: "Kenneth Basco eats poopy butts")</li>
+                  <li> <em> (+1 pts)</em> SWAP the order of existing html elements on this page (i.e., put the Activity at the top, put a sub heading underneath the image, move the paragraph to the bottom </li>
+                  <li> <em> (+1 pts) </em> Use of <em>italics</em> or <strong>bolding</strong> text. </li>
+                  <li> <em> (+3 pts) </em> CREATE ONE of the following elements: </li>
+                      <ul> <!-- EXAMPLE OF ELEMENTS WITHIN ELEMENTS -->
+                          <li> paragraph (i.e., found poem, comment, copypasta, etc.) </li>
+                          <li> image  (i.e., selfie, meme, something you saw outside, in your room, etc.) </li>
+                          <li> list (i.e., list of favourite movies/shows, reasons to get out of bed, reasons you don't like this class, shopping list, how to tutorial) </li>
+                      </ul>
+                  <li><em>(+10 pts)</em> Add content to this page explaining what you did/changes made, and your <strong>scoring.</strong></li>
+                  <li>
+                    <strong><em>(x2 pt multiplier)</em> for experimentation and creativity</strong>
+                    (i.e, put elements inside elements,
+                    explain what you did using images or lists,
+                    nonsensical content,
+                    sensical content,
+                    etc.).
+                  </li>
+
+            </ul>
+
+            <p><strong>It is possible to score multiple birds with one element. ;^) </strong></p>
+
+            <p>When done, save your html file and <strong>UPLOAD it in the "Upload your Hacked Page" Assignment </strong> under the "Webpages, amirite?" module in canvas.</p>
 
 
-      <p>
 
-      </p>
-
+    </body>
 
 
-  </body>
+<!--
+    Instructional Design by Ken Basco | kenbas.co
+    Creative Consultation by @staoue
+    knaveHaven 2020
+-->
+
 
 <footer>  </footer>
 
