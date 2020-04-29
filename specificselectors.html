@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Specific Selectors</title>
+    <style>
+      body {background-color: #fbfbfb; font-family: Helvetica; line-height: 1.3;}
+      p {color: #131313 ;}
+      code {background-color: #dcdcdc;   }
+      pre code {display: block;}
+      .different {background-color: #131313; color: #fbfbfb; } /* to use custom named selectors, there must be a period "." in front of the selector name*/
+    </style>
+  </head>
+  <body>
+
+    <h1>How to select Specific elements</h1>
+    <h2>Not like Other Paragraphs</h2>
+    <p>
+        As you can see, there are more than one paragraph in this article.
+    </p>
+    <p>
+        If we change the properties of the <code>&lt;p&gt;</code> tag on line
+        7 of this code, it changes how every paragraph (or all text between the
+        &lt;p&gt; tags) on this page looks.
+    </p>
+
+      <!--
+        we can give this <p> tag a specific name
+        to differentiate it from the other p elements
+
+        we do this by adding "class=" inside the <p> tag
+        then assigning it a name within quotation marks ""
+
+        in this case, we name this <p>aragraph "different"
+        different has its own selector on line 10 of this code
+      -->
+      <p class="different">
+        But what if we want this paragraph to look different than others?
+      </p>
+
+    <h2>Directions</h2>
+
+    <p>
+      Open this code and find out how to change the style of <strong>specific</strong>
+      paragraphs
+    </p>
+
+
+    <p>
+      Create your own HTML element and give it its own custom styling.
+    </p>
+
+    <p>
+      You can change the background color, font, etc.
+
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

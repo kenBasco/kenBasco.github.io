@@ -18,3 +18,12 @@ explains this well you can watch at: youtu.be/MijmeoH9LT4 -->
     - A poem told in mixed media (pictures, lists, words)
 
 -->
+
+
+<!--
+SELECTORS MODULE
+
+- Which line should we change if we want to select CHILDREN
+of the html element? (how do we go about changing the code?)
+
+-->
