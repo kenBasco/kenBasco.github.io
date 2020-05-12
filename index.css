@@ -7,32 +7,75 @@
   src: url(fonts/Clarendon-Light.woff);
 }
 
-/
+:root {
+  --kH-red: #b13;
+  --kH-dark-red: #961231;
+  --kH-light-red: #b1331b;
 
-p
-{
-  font-family: arial;
-  color: #1b1b1b;
-  font-size: 1.3rem;
+  --kH-black: #131313;
+  --kH-special-black: #1b1b1b;
+  --kH-dark-grey: #313131;
+  --kH-grey: #333;
+  --kH-white: #fbfbfb;
+
 }
 
 
 html, body {
-  margin: 0;
-  padding: 0;
+  font-family: Helvetica;
+  color: #fbfbfb;
+  font-size: 1.6em;
 }
 
-h1
+.topnav
 {
-  font-size: 9rem;
-  color: #1b1b1b;
-  font-family: clarendonBold, Arial;
+
+  width: 100%;
+  font-weight: bold;
+  line-height: 3em;
+}
+
+.topnav a
+{
+
+  background-color: var(--kH-black);
+  color: var(--kH-white);
+  text-decoration: none;
+  padding: .3em .6em;
+
+}
+
+.topnav a:hover {
+  background-color: var(--kH-white);
+  color: var(--kH-black);
+
+}
+
+.topnav a.active {
+  background-color: var(--kH-white);
+  color: var(--kH-black);
 }
 
 
 body
 {
+  background-color: var(--kH-black);
+}
 
-  background-color: #333;
 
+h1
+{
+  color: #fbfbfb;
+  font-family: Arial;
+  font-size: 13vh;
+  margin:0;
+  border:0;
+
+}
+
+
+p
+{
+  font-family: arial;
+  font-size: 1.3rem;
 }
