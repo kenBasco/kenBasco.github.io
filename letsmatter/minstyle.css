@@ -14,38 +14,4 @@ body
   color: #131313;
   background-color: #fbfbfb;
 
-
-
-}
-
-
-
-
-nav ul li ul
-{
-
-  display: none;
-
-
-}
-
-nav ul li:hover > ul
-{
-  color: green;
-  display: inherit;
-  transition: 2s;
-
-  list-style: none;
-
-
-}
-
-
-#btnControl {
-    display: none;
-}
-
-#btnControl:checked + label > img {
-    width: 70px;
-    height: 74px;
 }
