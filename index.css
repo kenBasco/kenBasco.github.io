@@ -1,13 +1,17 @@
-@font-face {
+@font-face
+{
   font-family: clarendonBold;
   src: url(fonts/Clarendon-Bold.woff);
 }
-@font-face {
+
+@font-face
+{
   font-family: clarendonlight;
   src: url(fonts/Clarendon-Light.woff);
 }
 
-:root {
+:root
+{
   --kH-red: #b13;
   --kH-dark-red: #961231;
   --kH-light-red: #b1331b;
@@ -17,50 +21,43 @@
   --kH-dark-grey: #313131;
   --kH-grey: #333;
   --kH-white: #fbfbfb;
-
 }
 
 
-html, body {
+html, body
+{
   margin: 0;
   padding: 0;
 }
 
-
-.topnav
+nav
 {
-
   width: 100%;
   font-weight: bold;
-  padding: 1em 0em;
+  padding: 1.3em 0em;
   line-height: 1.9em;
-  margin: 0 auto;
-
-
+  overflow: hidden;
 }
 
-.topnav a
+nav a
 {
-
+  float: left;
   background-color: var(--kH-black);
   color: var(--kH-white);
   text-decoration: none;
-  padding: .3em .6em;
-
-
+  padding: .3em .7em;
 }
 
-.topnav a:hover {
-  background-color: var(--kH-white);
-  color: var(--kH-black);
-
-}
-
-.topnav a.active {
+nav a:hover
+{
   background-color: var(--kH-white);
   color: var(--kH-black);
 }
 
+nav a.active {
+  background-color: var(--kH-white);
+  color: var(--kH-black);
+}
 
 body
 {
@@ -86,17 +83,15 @@ h1
   border:0;
   font-size: 13vh;
   top: 0;
-
 }
 
-div.spec
-{
-  color: #b13;
-}
 
 p
 {
   font-family: arial;
+  line-height: 1.3em;
+  margin-left: 1.3em;
+  margin-right: 1.3em;
 }
 
 footer
