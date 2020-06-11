@@ -2,11 +2,105 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Chunk out those words !</title>
+
+    <style media="screen">
+
+      body
+      {
+        font-size: 1.3em;
+        background-color: #131313;
+      }
+
+      input
+      {
+        font-size: 1.3em;
+        width: 75%
+      }
+
+      h1
+      {
+        color: #f3f3f3;
+        font-size: 5em;
+        font-family: Helvetica;
+        display: block;
+      }
+
+      h2
+      {
+        color: #f3f3f3;
+        font-size: 5em;
+      }
+
+      textarea
+      {
+        color: #f3f3f3;
+        font-size: 3em;
+        background-color: #131313;
+        font-family: Helvetica;
+        border: none; /*2px dashed red; */
+        font-weight: bold;
+
+      }
+
+      input
+      {
+        color: #f3f3f3;
+        font-size: 5em;
+        background-color: #131313;
+        font-family: Helvetica;
+        border: none; /*2px dashed red; */
+        font-weight: bold;
+      }
+
+      #noChars
+      {
+        color: #696969;
+        font-size: 9em;
+        line-height: 0.3em;
+      }
+
+    </style>
+
+
   </head>
   <body>
-    <p>write text here</p>
-    <input type="text" name="" value="write text here">
+
+    <!--<h1 id = "todisplay" value="write text here"> Chunk out here: </h1> -->
+
+
+    <textarea id="tarea" oninput="countChars()" rows="6" cols="33" placeholder="Composesure:" maxlength="190"></textarea>
+    <h2 id = "noChars"> 0 </h2>
+
+    <script>
+
+      var numberOfChars = 0;
+
+      function countChars()
+      {
+        numberOfChars = document.getElementById("tarea").value.length;
+
+        if(numberOfChars > 180)
+        {
+          document.getElementById("noChars").innerHTML = numberOfChars;
+          document.getElementById("noChars").style.color = "#b13";
+        }
+        else
+        {
+          document.getElementById("noChars").innerHTML = numberOfChars;
+          document.getElementById("noChars").style.color = "#696969";
+        }
+
+
+
+      }
+
+      function typeChars()
+      {
+        document.getElementById("todisplay").innerHTML = document.getElementById("tarea").value + "&nbsp";
+      }
+
+    </script>
 
 
 
