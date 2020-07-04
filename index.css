@@ -10,6 +10,26 @@
   src: url(fonts/Clarendon-Light.woff);
 }
 
+@font-face
+{
+
+  font-family: Inconsolata;
+  src: url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap%27);
+
+}
+
+@media (max-width:699px)
+{
+  /*body{width:90%}*/
+  main{width:90%}
+}
+
+@media (min-width:700px)
+{
+  /*body{width:50%}*/
+  main{width:75%}
+}
+
 :root
 {
   --kH-red: #b13;
@@ -26,8 +46,25 @@
 
 html, body
 {
+
+
   margin: 0;
   padding: 0;
+
+}
+
+body
+{
+  background-color: var(--kH-black);
+  font-family:  Helvetica, Arial ;
+  font-size: 3em;
+  color: var(--kH-white);
+}
+
+main
+{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 nav
@@ -59,14 +96,6 @@ nav a.active {
   color: var(--kH-black);
 }
 
-body
-{
-  background-color: var(--kH-black);
-  font-family: Helvetica;
-  font-size: 3em;
-  color: var(--kH-white);
-}
-
 aside
 {
   width: 13%;
@@ -77,26 +106,35 @@ aside
 
 h1
 {
+
   color: #fbfbfb;
-  font-family: Arial;
   margin:0;
   border:0;
   font-size: 13vh;
   top: 0;
+  padding: 0;
 }
 
 
 p
 {
-  font-family: arial;
-  line-height: 1.3em;
-  margin-left: 1.3em;
-  margin-right: 1.3em;
+
+  /*display: inline-block;*/
+  padding-bottom: 1.3em;
+  margin: 0 auto;
+
+}
+
+a
+{
+  color: var(--kH-red);
+  text-decoration: none;
+  font-style: none;
 }
 
 footer
 {
+  position: relative;
   font-size: 0.6em;
-
-  bottom: 0;
+  bottom: 0px;
 }
