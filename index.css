@@ -12,22 +12,50 @@
 
 @font-face
 {
-
   font-family: Inconsolata;
-  src: url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap%27);
-
+  src: url(https://fonts.googleapis.com/css?family=Inconsolata);
 }
 
-@media (max-width:699px)
+@font-face
+{
+  font-family: firamonomed;
+  src: url(fonts/FiraMono-Medium.otf);
+}
+
+@font-face
+{
+  font-family: firamonoreg;
+  src: url(fonts/FiraMono-Regular.otf);
+}
+
+@font-face
+{
+  font-family: firamonobold;
+  src: url(fonts/FiraMono-Bold.otf);
+}
+
+
+
+
+@media (max-width:1299px)
 {
   /*body{width:90%}*/
-  main{width:90%}
+  main
+  {
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-@media (min-width:700px)
+@media (min-width:1300px)
 {
   /*body{width:50%}*/
-  main{width:75%}
+  main
+  {
+    width:70%;
+    margin-left: 1.3em;
+  }
 }
 
 :root
@@ -56,15 +84,14 @@ html, body
 body
 {
   background-color: var(--kH-black);
-  font-family:  Helvetica, Arial ;
+  font-family: firamonomed, Helvetica, Arial ;
   font-size: 3em;
   color: var(--kH-white);
 }
 
 main
 {
-  margin-left: auto;
-  margin-right: auto;
+
 }
 
 nav
@@ -72,7 +99,7 @@ nav
   width: 100%;
   font-weight: bold;
   padding: 1.3em 0em;
-  line-height: 1.9em;
+  line-height: 1.9;
   overflow: hidden;
 }
 
@@ -120,8 +147,7 @@ p
 {
 
   /*display: inline-block;*/
-  padding-bottom: 1.3em;
-  margin: 0 auto;
+  margin-top: 0;
 
 }
 
