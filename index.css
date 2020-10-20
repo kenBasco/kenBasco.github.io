@@ -90,7 +90,7 @@ html, body
 body
 {
   background-color: var(--kH-black);
-  font-family: firamonomed, Helvetica, Arial ;
+  font-family: Helvetica, firamonomed,  Arial ;
   font-size: 1.9em;
   color: var(--kH-white);
 }
