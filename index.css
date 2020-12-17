@@ -93,6 +93,7 @@ body
   font-family: Helvetica, Arial, firamonomed ;
   font-size: 1.9em;
   color: var(--kH-white);
+  width: 960px;
 }
 
 
