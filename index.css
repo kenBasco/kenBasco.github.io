@@ -43,26 +43,7 @@
 
 
 
-@media (max-width:1299px)
-{
-  /*body{width:90%}*/
-  main
-  {
-    width:95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
-@media (min-width:1300px)
-{
-  /*body{width:50%}*/
-  main
-  {
-    width:70%;
-    margin-left: 1.3em;
-  }
-}
 
 :root
 {
@@ -91,7 +72,7 @@ body
 {
   background-color: var(--kH-black);
   font-family: Helvetica, Arial, firamonomed ;
-  font-size: 1.9em;
+  font-size: 1.9rem;
   color: var(--kH-white);
   width: 960px;
 }
@@ -141,7 +122,8 @@ h1
   color: #fbfbfb;
   margin:0;
   border:0;
-  font-size: 13vh;
+  font-size: 3em;
+   /*was font-size: 13vh */
   top: 0;
   padding: 0;
 }
@@ -164,7 +146,7 @@ a
 
 footer
 {
-  position: relative;
-  font-size: 0.6em;
-  bottom: 0px;
+  position: fixed;
+  font-size: 0.9em;
+  bottom: 10px;
 }
