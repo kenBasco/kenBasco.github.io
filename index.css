@@ -55,28 +55,63 @@
   --kH-special-black: #1b1b1b;
   --kH-dark-grey: #313131;
   --kH-grey: #333;
-  --kH-white: #fbfbfb;
+  --kH-white: #fefefe;
 }
 
 
 html, body
 {
 
-
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0;
   padding: 0;
+  /* margin:0; comment this in if you want it to go to the left, otherwise it will be centered */
 
 }
+
 
 body
 {
-  background-color: var(--kH-black);
+  background-color: var(--kH-special-black);
   font-family: Helvetica, Arial, firamonomed ;
   font-size: 1.9rem;
-  color: var(--kH-white);
+  color: var(--kH-black);
   width: 960px;
+
 }
 
+main
+{
+  height: 100vh;
+  background-color: var(--kH-white);
+
+  margin-top: 0;
+
+
+   /*the diff between margin and padding is that padding will inherit the color of the element, whereas margin is void, inherits the color of the body*/
+}
+
+main > *
+{
+margin-top: 0;
+padding-top: 1em ;
+padding-left: 1em;
+
+
+}
+
+li
+{
+  margin-left: 1em;
+}
+
+header
+{
+  background-color: var(--kH-special-black);
+  margin-bottom: 0;
+
+}
 
 
 nav
@@ -86,15 +121,20 @@ nav
   padding: 1.3em 0em;
   line-height: 1.9;
   overflow: hidden;
+
+  padding-bottom: 0;
+  margin-bottom: 0;
+
 }
 
 nav a
 {
   float: left;
-  background-color: var(--kH-black);
+  background-color: var(--kH-special-black);
   color: var(--kH-white);
   text-decoration: none;
   padding: .3em .7em;
+
 }
 
 nav a:hover
@@ -124,29 +164,22 @@ h1
   border:0;
   font-size: 3em;
    /*was font-size: 13vh */
-  top: 0;
-  padding: 0;
+
+
 }
 
-
-p
-{
-
-  /*display: inline-block;*/
-  margin-top: 0;
-
-}
 
 a
 {
   color: var(--kH-red);
-  text-decoration: none;
-  font-style: none;
+  font-style: bold;
+
 }
 
 footer
 {
-  position: fixed;
+  color: var(--kH-white);
+  text-align: right;
   font-size: 0.9em;
   bottom: 10px;
 }
