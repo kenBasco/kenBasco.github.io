@@ -1,203 +1,95 @@
-@font-face
-{
-  font-family: BARABARA;
-  src: url(fonts/BARABARA-Regular.ttf);
-}
-
-@font-face
-{
-  font-family: clarendonBold;
-  src: url(fonts/Clarendon-Bold.woff);
-}
-
-@font-face
-{
-  font-family: clarendonlight;
-  src: url(fonts/Clarendon-Light.woff);
-}
-
-@font-face
-{
-  font-family: Inconsolata;
-  src: url(https://fonts.googleapis.com/css?family=Inconsolata);
-}
-
-@font-face
-{
-  font-family: firamonomed;
-  src: url(fonts/FiraMono-Medium.otf);
-}
-
-@font-face
-{
-  font-family: firamonoreg;
-  src: url(fonts/FiraMono-Regular.otf);
-}
-
-@font-face
-{
-  font-family: firamonobold;
-  src: url(fonts/FiraMono-Bold.otf);
-}
-
-
-
-
-
-
 :root
 {
   --kH-red: #b13;
-  --kH-dark-red: #961231;
   --kH-light-red: #b1331b;
-
   --kH-black: #131313;
   --kH-special-black: #1b1b1b;
-  --kH-dark-grey: #313131;
-  --kH-grey: #333;
   --kH-white: #fefefe;
 }
-
 @media (max-width:959px)
 {
   body
   {
     width:100%;
-
   }
 }
-
 @media (min-width:960px)
 {
   body
   {
     width:960px;
-
   }
 }
-
-
 html, body
 {
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-top:0;
+  font-size: 3.9vh;/*1.9rem;*/
   padding: 0;
-  /* margin:0; comment this in if you want it to go to the left, otherwise it will be centered */
-
-}
-
-
-body
-{
   background-color: var(--kH-special-black);
-  font-family: Helvetica, Arial, firamonomed ;
-  font-size: 1.9rem;
-  color: var(--kH-black);
-  
-
+  font-family: Helvetica, Arial ;
+  margin:auto;
 }
-
-main
+h1
 {
-  height: 100vh;
-  background-color: var(--kH-white);
-
-  margin-top: 0;
-
-
-   /*the diff between margin and padding is that padding will inherit the color of the element, whereas margin is void, inherits the color of the body*/
+  margin:0;
+  padding: 0;
+  font-size: 3rem;
 }
-
-main > *
-{
-margin-top: 0;
-padding-top: 1em ;
-padding-left: 1em;
-
-
-}
-
-li
-{
-  margin-left: 1em;
-}
-
 header
 {
   background-color: var(--kH-special-black);
-  margin-bottom: 0;
-
+  color: var(--kH-white);
 }
-
-
 nav
 {
-  width: 100%;
   font-weight: bold;
   padding: 1.3em 0em;
   line-height: 1.9;
   overflow: hidden;
-
   padding-bottom: 0;
   margin-bottom: 0;
-
 }
-
+main
+{
+  height: 95vh;
+  background-color: var(--kH-white);
+  color: var(--kH-black);
+  margin-top: 0; /*the diff between margin and padding is that padding will inherit the color of the element, whereas margin is void, inherits the color of the body*/
+}
+footer
+{
+  color: var(--kH-white);
+}
+main  > * /* all immediate descendants of main */
+{
+  margin-top: auto;
+  margin-left: 1rem;
+  padding-top: 1rem;
+}
+main a /* all links in main*/
+{
+  color: var(--kH-white);
+  margin-top: 0;
+  font-style: bold;
+  font-size: 1.3rem;
+  display: inline-block;
+  padding: 1.3rem 1.3rem 1rem 1rem;
+  background-color: var(--kH-light-red);
+  margin-left: -1rem;
+}
 nav a
 {
   float: left;
   background-color: var(--kH-special-black);
   color: var(--kH-white);
   text-decoration: none;
-  padding: .3em .7em;
-
+  padding: .5em .9em;
 }
-
 nav a:hover
 {
   background-color: var(--kH-white);
   color: var(--kH-black);
 }
-
 nav a.active {
   background-color: var(--kH-white);
   color: var(--kH-black);
-}
-
-aside
-{
-  width: 13%;
-  float: right;
-  padding-left: 15px;
-  margin-left: 15px;
-}
-
-h1
-{
-
-  color: #fbfbfb;
-  margin:0;
-  border:0;
-  font-size: 3em;
-   /*was font-size: 13vh */
-
-
-}
-
-
-a
-{
-  color: var(--kH-red);
-  font-style: bold;
-
-}
-
-footer
-{
-  color: var(--kH-white);
-  text-align: right;
-  font-size: 0.9em;
-  bottom: 10px;
 }
