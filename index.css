@@ -58,6 +58,15 @@
   --kH-white: #fefefe;
 }
 
+@media (max-width:959px)
+{
+  body
+  {
+    width:100%;
+
+  }
+}
+
 
 html, body
 {
