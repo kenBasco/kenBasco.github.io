@@ -67,6 +67,15 @@
   }
 }
 
+@media (min-width:960px)
+{
+  body
+  {
+    width:960px;
+
+  }
+}
+
 
 html, body
 {
@@ -86,7 +95,7 @@ body
   font-family: Helvetica, Arial, firamonomed ;
   font-size: 1.9rem;
   color: var(--kH-black);
-  width: 960px;
+  
 
 }
 
