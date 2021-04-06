@@ -2,40 +2,174 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="index.css"/>
-    <title>Composeur page</title>
+    <title>Chunk out those words !</title>
+
+    <style media="screen">
+
+      body
+      {
+        background-color: #131313;
+        font-size: 3em;
+      }
+
+      main
+      {
+        float:left;
+        display:inline;
+        width: 49%;
+
+      }
+
+      aside
+      {
+
+        float:left;
+        width: 49%;
+        display: block;
+        color: white;
+
+      }
+
+      input
+      {
+
+        /* width: 75% */
+      }
+
+      h1
+      {
+        color: #f3f3f3;
+        font-family: Helvetica;
+        display: block;
+      }
+
+      h2
+      {
+        color: #f3f3f3;
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+      }
+
+      p
+      {
+        display: block;
+        overflow-wrap: break-word;
+      }
+
+      textarea
+      {
+        color: #f3f3f3;
+        background-color: #131313;
+        font-family: Helvetica;
+        border: none; /*2px dashed red; */
+        font-weight: bold;
+        font-size: inherit;
+        font-size: 1.3em;
+      }
+
+      input
+      {
+        color: #f3f3f3;
+        background-color: #131313;
+        font-family: Helvetica;
+        border: none; /*2px dashed red; */
+        font-weight: bold;
+        font-size: inherit;
+      }
+
+
+      button
+      {
+        background-color: #b13b13;
+        border: none;
+        color: white;
+        padding: 0.9em 0.9em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: inherit;
+      }
+
+      #noChars
+      {
+        color: #696969;
+        font-family: Times New Roman;
+        font-size: 3em;
+        /*font-size: 3em; */
+        /*line-height: 0.3em; */
+      }
+
+    </style>
+
+
   </head>
   <body>
-    <header>
-      <h1>Uh Oh ! :^0</h1>
 
-
-      <nav>
-          <a href="./index.html">Home</a>
-          <a href="./work.html">Work</a>
-          <a href="./info.html">Info</a>
-          <a href="" class="active"> :^/ </a>
-
-      </nav>
-
-
-    </header>
+    <!--<h1 id = "todisplay" value="write text here"> Chunk out here: </h1> -->
 
     <main>
-        <p>Hi, if you're on this page that means you
-        found this link through a presentation I gave.</p>
-        <p>Ever since, I made some change to where everything is
-          and I moved Composeure to this page below:</p>
 
-        <a href="./composeur.html">New Composeur application page</a>
+      <textarea id="tarea" oninput="countChars()" onkeyup="chunkd()" rows="10" cols="19" placeholder="Composesure:" maxlength="190"></textarea>
+      <h2 id = "noChars"> 0 </h2>
 
-
-
-
-        <p>Thanks for visiting my site, and Sorry for the inconvenience ! :^U</p>
-        <p>- Ken</p>
+      <!-- <button type="button" onclick="chunkd()">Chunk!</button> -->
 
     </main>
+
+    <aside id="comp">
+
+      <h2> [ENTER] to Chunk </h2>
+
+    </aside>
+
+
+    <script>
+
+      var numberOfChars = 0;
+
+      function countChars()
+      {
+        numberOfChars = document.getElementById("tarea").value.length;
+
+        if(numberOfChars > 180)
+        {
+          document.getElementById("noChars").innerHTML = numberOfChars;
+          document.getElementById("noChars").style.color = "#b13";
+        }
+        else
+        {
+          document.getElementById("noChars").innerHTML = numberOfChars;
+          document.getElementById("noChars").style.color = "#696969";
+        }
+
+      }
+
+      function typeChars()
+      {
+        document.getElementById("todisplay").innerHTML = document.getElementById("tarea").value + "&nbsp";
+      }
+
+
+
+      function chunkd()
+      {
+        if(event.keyCode == 13 || event.which == 13) //if enter key is pressed
+        {
+           var grabAside = document.getElementById("comp");  //gets the aside element
+           var composed = document.getElementById("tarea").value ; //gets the text in the text area
+
+           var chunkContainer = document.createElement("P");   // Create a <p> node
+           var chunk = document.createTextNode(composed);  // Create a text node
+           chunkContainer.appendChild(chunk);          // Append the text to chunkContainer
+           grabAside.appendChild(chunkContainer);      // appends chunkContainer to aside
+
+           document.getElementById('tarea').value = ""; //clears out text box
+         }
+
+      }
+
+    </script>
 
 
 
