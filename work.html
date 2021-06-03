@@ -1,48 +1,102 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ken Basco</title>
+    <style>
+    /*
+    playful red: b1331b
+    red: bb1133
+    dark red: 961231
+    black: 131313
+    gray: 696969
+    white: fefefe
+     */
 
-      <link rel="stylesheet" href="index.css"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+    :root {
+      --main-color: #131313;
+      --accent-color: #b13b13;
+      --text-color: #fefefe;
+    }
+    html, body
+    {
+      padding: 0;
+      margin:0;
+      font-size: 3.9vh;
+      font-family: Helvetica;
+      background-color: var(--main-color);
+      color: var(--text-color);
+    }
+    header
+    {
+      margin: 0;
+      padding: 0;
+    }
+    main
+    {
+      margin: 1em 1em;
+      width: 720px;
+    }
+    h1
+    {
+      margin:0;
+      padding:0;
+      font-size: 3rem;
+    }
+    a
+    {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    a.curriculum-vitae
+    {
+      position: relative;
+      display: inline-block;
+      padding: 0.6em 0.9em;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      font-size: 6vh;
+      text-decoration: none;
+    }
+    a.curriculum-vitae:hover
+    {
+      background-color: var(--text-color);
+      color: var(--main-color);
+    }
+    #tagline
+    {
+      font-size: 1.3em;
+      margin-top: 0;
+    }
+    #contact
+    {
+      position: relative;
 
-        <title>Kenneth Basco </title>
+    }
+    footer
+    {
+      position: absolute;
+      bottom: 0;
+    }
+    </style>
+  </head>
+  <body>
+  <header>
+    <h1>KEN BASCO</h1>
+  <p id="tagline">Procrastinator</p>
 
-    </head>
-    <body>
-      <header>
-        <h1>KEN BASCO</h1>
+  </header>
+  <main>
+    <h2>Last updated: 03.06.21</h2>
+    <p>I'm still curating my work and need to update this page soon.
+    Come back later please :^U !</p>
 
-
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./work.html" class="active">Work</a>
-            <a href="./info.html">Info</a>
-
-        </nav>
-          </header>
-
-        <main>
-
-        <p>
-          My work involves developing Information Systems using IT.
-          <br>
-          This includes but is not limited to:
-        </p>
-
-        <ul>
-          <li>Product Development</li>
-          <li>Knowledge Organization</li>
-          <li>Instructional Design</li>
-          <li>Multimedia Production</li>
-        </ul>
-
-      </main>
-
-        <footer> 2021 | &#127279; knaveHaven </footer>
-
-    </body>
+    <p>You can find your way back: <a href="./index.html" style="padding: 0.6em 0.6em; text-decoration: none; background-color: #b13b13 ; color:#fefefe;">Home</a></p>
 
 
+  </main>
+    <footer>
+      2021 | &#127279; knaveHaven
+    </footer>
+  </body>
 </html>
