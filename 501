@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ken Basco's 501 Student Profile</title>
+    <style media="screen">
+      body
+      {
+        background-color: #b1331b;
+        color: #fefefe;
+        font-size: 1.3em;
+
+        font-family:Helvetica;
+
+      }
+      main
+      {
+        width: 960px;
+        margin: auto;
+
+
+      }
+      a
+      {
+        color: #fefefe;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <h1>501 Student Profile</h1>
+
+      <h2>Foreword</h2>
+      <p>At the time of writing this, it is 8:09pm, on December 15, 2021.
+        I apologize for submitting this so last minute.
+        At the beginning of the semester Dr. Aronson instructed us to create these student profiles
+      with something along the lines of "baseball cards" people can pass around in the department. What drew me to the library discipline is how much it made me reflect on aesthetics.
+      How do we represent information? What technique does it take to make something meaningful? How much of ourselves do we change to make us feel seen? How does the medium influence that? the technology? the system, the culture, the person etc.
+      So of course once I heard baseball cards my mind went wild and wanted to make this whole conversational multi-media experience I ended up sitting on for ~15 weeks. However with ~3 hours left on the clock, I'll settle for an HTML page. </p>
+
+      <h2>Picture, Name, (Online/Campus/Hybrid)?</h2>
+
+
+          <img src="https://pbs.twimg.com/profile_images/1458458495880077313/dWD7WkqH_400x400.jpg" alt="three fourths profile of a tan male with dark medium length wavy hair wearing glasses">
+
+          <p>My name is <strong>Ken Basco</strong> (they/them), I am an <strong>online student</strong>.</p>
+
+
+      <h2>Academic Interest</h2>
+
+      <p>My academic interest is <strong>Critical Pedagogy through a New Media lens</strong>; how people relate to representations of information/build a cognitive space, and empower people to build these spaces. <strong>I concentrate in DIY</strong> because I can’t decide between Interaction Design, School Librarianship, LIS, and AP.</p>
+
+      <p>I want to explore how studying interfaces, systems, and spaces from other disciplines can help educators transition into a redesigned (emotionally autonomous, and gradeless) education.</p>
+
+      <p>I'm really into <strong>Instructional Design</strong>, but most of the things I've seen seems to be within the confines of a capitalist education.
+      (i.e., course materials as products, measuring success through grades, solutionism in education technology). I'm trying to go about it
+    with a more speculative approach so the things I've been trying to read as of late are closer to Cybernetics, Ontologies, Categorization, and ______ semiotics.</p>
+
+
+    <h3>Student and Employment Status</h3>
+
+    <p>I am currently working Full Time at Rutgers as an Assistive Technology Specialist at RADR (Rutgers Accessibility and Disability Resources).
+    Because of this, I am a <strong>Part Time Student</strong>. </p>
+
+    <h3>Who is my Adviser</h3>
+
+    <p>I have been reccomended <strong>Gretchen Stahlman</strong> as my adviser how ever I have yet to meet with them at the time of writing. (I apologize.)</p>
+
+    </main>
+
+    <footer>2021 | &#127279; knaveHaven</footer>
+  </body>
+</html>
