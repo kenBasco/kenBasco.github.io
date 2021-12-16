@@ -183,14 +183,14 @@
 
   </section>
 
-  <section id = "papernink">
+  <section id = "papernink" >
 
   <!-- <h1>Your bibliography:</h1> -->
 
   <p id = "biblio">N/A</p>
 
 
-  </section>
+</section>
 
   <script>
 
@@ -225,8 +225,8 @@
       + bodyOfWorkVal + " [" + mediumVal +"]." ;
 
 
-      document.getElementById("biblio").appendChild("br");
-      document.getElementById("biblio").appendChild("br");
+      document.getElementById("biblio").appendChild(document.createElement("BR"));
+      document.getElementById("biblio").appendChild(document.createElement("BR"));
 
 
       var bull1 = document.createElement("LI");
