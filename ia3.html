@@ -221,10 +221,12 @@
       note3Val = "-" + document.getElementById("Note3").value;
 
       document.getElementById("biblio").innerHTML = document.getElementById("author").value
-      + ". (" + dateVal + "). " +  " *[" + titleOfWorkVal + "]" + "(" + urlVal + ")*"
+      + ". (" + dateVal + "). " +  " *[" + titleOfWorkVal + "]" + "(" + urlVal + ")* "
       + bodyOfWorkVal + " [" + mediumVal +"]." ;
 
 
+      document.getElementById("biblio").appendChild("br");
+      document.getElementById("biblio").appendChild("br");
 
 
       var bull1 = document.createElement("LI");
