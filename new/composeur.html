@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    html {
+      margin: 0;
+      padding: 0;
+
+      & body
+      {
+        font-size: 3em;
+        background-color: #79abfe;
+      }
+
+    }
+
+    section#composeSection
+    {
+      float: left;
+      max-width: 40%;
+      max-height: 60%;
+      position: fixed;
+      /*background-color: white;*/
+    }
+
+    textarea#composeTextArea
+    {
+      width: 100%;
+
+      box-sizing: border-box;
+
+
+      color: #f3f3f3;
+        background-color: #79abfe;
+        font-family: Arial, Helvetica;
+        border: none; /*2px dashed red; */
+        font-weight: bold;
+        font-size: inherit;
+        /*font-size: 1.3em;*/
+
+      }
+
+    section#theComposed
+    {
+      float: right;
+      max-width: 40%;
+      background-color: #79abfe;
+      color: white;
+
+      & p
+      {
+
+        display: block;
+        overflow-wrap: break-word;
+
+       margin: 0;
+       padding: 0;
+
+
+      }
+
+    }
+
+    section#noChars
+    {
+      color: #696969;
+      font-family: Times New Roman;
+      font-size: 3em;
+      padding: 0.3em 0.1em;
+
+      border-radius: 45%;
+      display: inline-block;
+    }
+
+
+    </style>
+  </head>
+  <body>
+
+
+<section id = "composeSection">
+
+  <section id = "noChars">
+
+  </section>
+
+  <textarea id="composeTextArea" rows="8" cols="80" oninput="countChars()" onkeyup="chunkd()"  placeholder="Composesure:"  > compose</textarea>
+
+
+</section>
+
+
+
+<section id = "theComposed">
+  <p>press [Enter] to compose</p>
+  <p>whatever you say will go here, okay?</p>
+  <br>
+</section>
+
+
+<script>
+
+      var numberOfChars = 0;
+      var charsRemaining;
+
+      function countChars()
+      {
+        charsRemaining = 140;
+        numberOfChars = document.getElementById("composeTextArea").value.length;
+
+        charsRemaining = charsRemaining - numberOfChars ;
+
+        document.getElementById("noChars").innerHTML = charsRemaining;
+
+        if(charsRemaining <= 50)
+        {
+          document.getElementById("noChars").style.color = "white";
+          document.getElementById("noChars").style.backgroundColor = "#79abfe";
+
+
+        }
+        else
+        {
+
+          document.getElementById("noChars").style.color = "blue";
+          document.getElementById("noChars").style.backgroundColor = "white";
+
+
+
+          /*document.getElementById("noChars").style.fontSize = (numberOfChars*.03) + "em"; */
+        }
+
+        document.getElementById("noChars").style.fontSize = (charsRemaining*.03) + "em";
+
+      }
+
+      function typeChars()
+      {
+        document.getElementById("todisplay").innerHTML = document.getElementById("composeTextArea").value + "&nbsp";
+      }
+
+
+
+      function chunkd()
+      {
+        if(event.keyCode == 13 || event.which == 13) //if enter key is pressed
+        {
+           var grabAside = document.getElementById("theComposed");  //gets the aside element
+           var composed = document.getElementById("composeTextArea").value ; //gets the text in the text area
+
+           var chunkContainer = document.createElement("P");   // Create a <p> node
+           var chunk = document.createTextNode(composed);  // Create a text node
+           chunkContainer.appendChild(chunk);          // Append the text to chunkContainer
+
+
+
+                   if(numberOfChars > 50)
+                   {
+                     chunkContainer.style.color = "blue";
+                     chunkContainer.style.backgroundColor = "white";
+
+                     chunkContainer.contentEditable = "true";
+                     chunkContainer.appendChild(document.createElement("BR"));
+
+                   }
+                   else
+                   {
+                     chunkContainer.style.fontSize = "1em";
+                     chunkContainer.contentEditable = "true";
+
+                     chunkContainer.appendChild(document.createElement("BR"));
+
+                   }
+
+          chunkContainer.appendChild(document.createElement("BR"));
+
+           grabAside.appendChild(chunkContainer);      // appends chunkContainer to theComposed
+
+
+           document.getElementById('composeTextArea').value = ""; //clears out text box
+         }
+
+      }
+
+    </script>
+
+
+  </body>
+
+
+</html>
