@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>3 LOVES BACKWARDS</title>
+
+    <style media="screen">
+
+      body
+      {
+        background-color: #b13;
+        color: #fefefe;
+        font-family: Helvetica;
+        font-size: 1.3em;
+      }
+
+      section
+      {
+        word-wrap: break-word;
+        /*display: inline-block;
+        width: 49vh; change it to this for mobile dev*/
+        float:left;
+        display:inline;
+        width: 49%;
+
+
+      }
+
+      section#papernink
+      {
+        filter: blur(0.333px);
+        background-color: white;
+        color: black;
+
+        font-family: Times;
+        position: sticky;
+
+
+        /*
+
+        white-space: pre;
+
+        transform:
+        translate(-33%,33%)
+        rotate(1.3deg)
+        skewY(-.3deg)
+        skewX(-.3deg)
+        scaleY(1.3)
+        scaleX(1.33);
+        */
+
+      }
+
+      p
+      {
+        word-wrap: break-word;
+        font-size: 2.3em;
+
+      }
+
+      p#biblio
+      {
+        /*
+        white-space: pre;
+        */
+      }
+
+      h1
+      {
+        color: inhertit;
+        font-size: 3em;
+      }
+
+      form
+      {
+        background-color: #3e3e3e;
+        color: #e3e3e3;
+
+        padding: 1em 1em 1em 1em;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+
+         /*display:inline; see what happens lol */
+      }
+
+      input
+      {
+        color: #131313;
+        background-color: #f3f3f3;
+        font-family: Helvetica;
+        border: none; /*2px dashed red; */
+        font-weight: bold;
+        font-size: inherit;
+      }
+
+
+      input[type=submit]
+      {
+        background-color: #131313;
+        border: none;
+        color: #e3e3e3;
+        padding: 0.9em 0.9em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: inherit;
+      }
+
+      input[type=submit]:hover
+      {
+        background-color: #3e3e3e;
+        border: none;
+        color: #961231;
+        padding: 0.9em 0.9em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: inherit;
+      }
+
+      button
+      {
+        color: #f3f3f3 ;
+        background-color: #131313;
+
+        font-family: Helvetica;
+        border: none; /*2px dashed red; */
+        font-weight: bold;
+        font-size: inherit;
+
+
+        border: none;
+
+        padding: 0.9em 0.9em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: inherit;
+      }
+
+
+
+
+      button:hover
+      {
+        background-color: #f3f3f3;
+        border: none;
+        color: #b13;
+        padding: 1.8em 1.8em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: inherit;
+        font-size: 1.3em;
+      }
+
+
+    </style>
+
+
+  </head>
+  <body>
+
+
+
+<section>
+
+  <h1 id="threelove">IA3 (3&lt;3) </h1>
+
+
+
+  <form oninput="createBibliography()" >
+
+
+
+
+  <label for="author">Author:</label><br>
+  <input type="text" id="author" name="author" value=""><br>
+
+  <label for="dateField">Date:</label><br>
+  <input type="date" id="dateField" name="dateField" value=""><br>
+
+  <label for="titleofWork">Title of work:</label><br>
+  <input type="text" id="titleofWork" name="titleofWork" value=""><br>
+
+  <label for="urlField">Url:</label><br>
+  <input type="text" id="urlField" name="urlField" value=""><br>
+
+
+  <label for="bodyofWork">Body of work:</label><br>
+  <input type="text" id="bodyofWork" name="bodyofWork" value=""><br><br>
+
+  <lable for = "medium">Medium:</label><br>
+  <select id="medium" name="Medium:">
+      <option value="Online Video">Video</option>
+      <option value="Informal Exchange">Informal Exchange</option>
+      <option value="Webpage">Webpage</option>
+      <option value="Blog Post">Blog Post</option>
+      <option value="Tweet">Tweet</option>
+      <option value="Podcast">Podcast</option>
+      <option value="Article">Article</option>
+      <option value="Book">Book</option>
+      <option value="Journal Article">Journal Article</option>
+      <option value="Photograph">Photograph</option>
+  </select>
+
+  <br>
+  <hr>
+  <label for="Note1">Note 1:</label>
+  <br>
+  <textarea id="Note1" name="Note1" rows="6" cols="45">
+  </textarea>
+
+  <br>
+  <label for="Note2">Note 2:</label>
+  <br>
+  <textarea id="Note2" name="Note2" rows="6" cols="45">
+  </textarea>
+  <br>
+  <label for="Note3">Note 3:</label>
+  <br>
+  <textarea id="Note3" name="Note3" rows="6" cols="45">
+  </textarea>
+
+  <br>
+  <br>
+
+
+  <input type="submit" value="Submit">
+
+
+
+
+
+</form>
+
+  </section>
+
+  <section id = "papernink" >
+
+  <!-- <h1>Your bibliography:</h1> -->
+
+    <button onclick="copyBib()">Copy Citation</button>
+
+  <p id = "biblio">N/A</p>
+
+
+</section>
+
+  <script>
+
+
+   var messFactor = 7;
+   var mess = messFactor * messFactor;
+
+   var currentNode = document.activeElement;
+
+
+
+    var urlVal = "";
+    var authorVal = "";
+    var dateVal = "";
+    var titleOfWorkVal = "";
+    var bodyOfWorkVal = "";
+    var mediumVal ="";
+
+    var note1Val = "";
+    var note2Val = "";
+    var note3Val = "";
+
+    function createBibliography()
+    {
+
+       var newNode =  document.activeElement;
+
+
+      urlVal = document.getElementById("urlField").value;
+      authorVal = document.getElementById("author").value;
+      titleOfWorkVal = document.getElementById("titleofWork").value;
+      dateVal = document.getElementById("dateField").value;
+      mediumVal = document.getElementById("medium").value;
+      bodyOfWorkVal = document.getElementById("bodyofWork").value;
+
+      note1Val = "-" + document.getElementById("Note1").value;
+      note2Val = "-" + document.getElementById("Note2").value;
+      note3Val = "-" + document.getElementById("Note3").value;
+
+      document.getElementById("biblio").innerHTML = '&#13';
+
+      document.getElementById("biblio").innerHTML += document.getElementById("author").value
+      + ". (" + dateVal + "). " +  " *[" + titleOfWorkVal + "]" + "(" + urlVal + ")* "
+      + bodyOfWorkVal + " [" + mediumVal +"]." ;
+
+
+      document.getElementById("biblio").appendChild(document.createElement("BR"));
+      document.getElementById("biblio").appendChild(document.createElement("BR"));
+
+
+      document.getElementById("biblio").innerHTML += '&#13';
+
+      document.getElementById("biblio").innerHTML += '&#13';
+
+      var bull1 = document.createElement("LI");
+      bull1.appendChild(document.createTextNode(note1Val));
+      document.getElementById("biblio").appendChild(bull1);
+
+
+        document.getElementById("biblio").innerHTML += '&#13';
+
+
+      var bull2 = document.createElement("LI");
+      bull2.appendChild(document.createTextNode(note2Val));
+      document.getElementById("biblio").appendChild(bull2);
+
+      document.getElementById("biblio").innerHTML += '&#13';
+
+      var bull3 = document.createElement("LI");
+      bull3.appendChild(document.createTextNode(note3Val));
+      document.getElementById("biblio").appendChild(bull3);
+
+
+      if(currentNode !== newNode)
+      {
+
+          document.getElementById("papernink").style.transform =
+          "translate(-" + Math.floor(Math.random() * mess) + "%," + Math.floor(Math.random() * mess) + "%) " +
+
+          "rotate(" + Math.round(Math.random() * (mess) ) * (Math.round(Math.random()) ? 1 : -1) + "deg)";
+
+          //calling transform again can reset eveything
+          /*
+          document.getElementById("papernink").style.transform =
+          "translate(-" + Math.floor(Math.random() * mess) + "%," + Math.floor(Math.random() * mess) + "%)";
+
+          ocument.getElementById("papernink").style.transform =
+          "rotate(" + Math.round(Math.random() * (360)) + "deg)"
+          */
+
+
+          currentNode = newNode;
+      }
+
+
+
+
+
+    }
+
+
+    function copyBib()
+    {
+      var citation = document.getElementById("biblio").textContent;
+      /*
+      citation.select();
+      citation.setSelectionRange(0, 99999);
+*/
+      navigator.clipboard.writeText(citation);
+
+// Alert the copied text
+      alert("Copied the text: " + citation);
+
+  /*
+      document.getElementById("threelove").innerHTML = citation;
+*/
+    }
+
+/*
+    function countChars()
+      {
+        numberOfChars = document.getElementById("biblio").value.length;
+
+        if((numberOfChars/3) == 0 )
+
+
+      }
+*/
+
+/*
+
+       */
+/*
+    }
+
+    function copyToClipboard() {
+      // Get the text field
+      var copyText = document.getElementById("biblio").textContent;
+
+      // Select the text field
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value);
+
+      // Alert the copied text
+      alert("Copied the text: " + copyText.value);
+}
+
+*/
+
+  </script>
+
+
+  </body>
+</html>
