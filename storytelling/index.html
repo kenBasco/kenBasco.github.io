@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+      body{
+        font-size: 1.3em;
+        font-family: Helvetica;
+        background-image: url("https://i.imgur.com/zjwHc.jpg");
+      }
+
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-size: 1.3em;
+      }
+
+      img{
+
+        height: 45vh;
+        width: 90vh;
+      }
+
+      main {
+        width: 800px;
+        margin:auto;
+        height:100vh;
+        background-color:  #CBC3E3;
+      }
+
+      #netart:hover
+      {
+        font-size: 1.6em;
+        background-color: orange;
+        font-family: "Times New Roman";
+
+      }
+
+      #netart a:hover{
+        color: black;
+
+      }
+
+      #narratives:hover
+      {
+        font-size: 1.6em;
+        background-color: red;
+        font-family: "Times New Roman";
+
+      }
+
+      #narratives a:hover{
+        color: white;
+      }
+
+      #collections:hover
+      {
+        font-size: 1.6em;
+        background-color: green;
+        font-family: "Times New Roman";
+
+      }
+
+      #collections a:hover{
+        color: white;
+      }
+
+      #learning:hover
+      {
+        font-size: 1.6em;
+        background-color: blue;
+        font-family: "Times New Roman";
+
+      }
+
+      #learning a:hover{
+        color: white;
+      }
+
+      #socialmedia:hover
+      {
+        font-size: 1.6em;
+        background-color: yellow;
+        font-family: "Times New Roman";
+
+      }
+
+      #socialmedia a:hover{
+        color: black;
+      }
+
+
+
+
+
+
+
+
+    </style>
+
+    <script type="text/javascript">
+
+      function setImage(n)
+      {
+        if (n == 0){
+
+          document.getElementById('displayed').src = "https://nowplaythis.net/wp-content/uploads/2023/02/2023-weareonlymovingtowardseachother-980x500.png";
+        }
+        if (n == 1 ) {
+          document.getElementById('displayed').src = "https://i0.wp.com/boingboing.net/wp-content/uploads/2020/09/Screen-Shot-2020-09-29-at-8.37.29-AM.png?fit=1440%2C772&ssl=1";
+
+        }
+        if (n == 2){
+
+          document.getElementById('displayed').src = "https://www.jennyodell.com/bso-shelves.jpg";
+
+
+        }
+        if (n == 3) {
+
+          document.getElementById('displayed').src = "./pics/form-and-code-net.PNG";
+
+
+        }
+        if (n == 4){
+
+          document.getElementById('displayed').src = "https://d2w9rnfcy7mm78.cloudfront.net/3017943/original_c852f944421a96c8ff1753cc843f78b1.png?1541873535";
+
+
+        }
+        if (n == 5) {
+
+          document.getElementById('displayed').src = "https://d2w9rnfcy7mm78.cloudfront.net/3017943/original_c852f944421a96c8ff1753cc843f78b1.png?1541873535";
+
+
+
+        }
+        else {
+          /*document.getElementById('displayed').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Simple_Net_Art_Diagram.svg/800px-Simple_Net_Art_Diagram.svg.png"*/
+
+        }
+      }
+
+    </script>
+  </head>
+
+
+  <body>
+
+  <main>
+
+
+
+<h1>WEBSTORIES 🌐📖</h1>
+<p>a display by kenbasco</p>
+
+<!--
+
+<p>there are different ways to tell a story both in medium and genre
+one of these ways is telling stories through webpages
+</p>
+
+<p>the web makes use in its ability to include multiple media formats at a time,
+scaffolding its content through actions performed by the user, or person using it</p>
+
+-->
+
+<table style = "max-width: 80%; margin: auto; ">
+  <tr style = "border-radius: 25px;">
+    <th id="monitor" colspan="3" style=" height: 45vh; background-color: #f9f9f9; border: 10px solid grey;  " > <img id="displayed" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Simple_Net_Art_Diagram.svg/800px-Simple_Net_Art_Diagram.svg.png" width="auto"; height="auto" alt="preview monitor here"></th>
+
+  </tr>
+  <tr>
+    <td id = "netart" onmouseover="setImage(0)"><a href="./net-art.html">net.art</a></td>
+    <td id = "narratives" onmouseover="setImage(1)"><a href="./narratives.html">Narratives</a></td>
+    <td id= "memo" style="" > 👈🖱️ ⤵️</td>
+  </tr>
+  <tr>
+    <td id = "collections" onmouseover="setImage(2)"><a href="./collections.html">Collections</a></td>
+    <td id = "learning" onmouseover="setImage(3)"><a href="./learning.html">Learning</a></td>
+    <td id = "socialmedia" onmouseover="setImage(5)"><a href="socialmedia.html">Social Media</a></td>
+  </tr>
+</table>
+
+  </main>
+
+
+  </body>
+</html>
