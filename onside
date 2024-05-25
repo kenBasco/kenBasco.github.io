@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>out of locus</title>
+    <style media="screen">
+      *
+      {
+        font-size: 1.6rem;
+      }
+      body
+      {
+        background-color: #ffca04;
+        color: #0C0D1D;
+      }
+      img
+      {
+        height: 300px;
+      }
+      main
+      {
+        width: 800px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p id="prompt">pass the third firehydrant <br> <br> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Fire_hydrant_6.jpg/1200px-Fire_hydrant_6.jpg" ></p>
+
+      <button onclick = "pickPrompt()" > 😩 </button>
+    </main>
+
+  </body>
+  <script>
+
+  var promptList = [
+  'reach the ninth tree <br><br> <img src="https:images.squarespace-cdn.com/content/v1/5de569b5065f5b7bc76a2a5c/756eb9e1-8b64-4990-aa06-fd8f64d50407/tree-with-burl.jpg" alt="">',
+  'finish at the end of the block  <br> <br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_sz9rVyBymhYPx0TUVbR_sChSFFVRPEMG0snTC8-U8g&s" alt="">',
+  'pretend you are a bird in flight, finish at the next place you would land <br><br> <img src="https://d2w9rnfcy7mm78.cloudfront.net/3381992/original_dc3a737e963de29b00319a34329cfee8.jpg?1547133734?bc=1">',
+  'encircle some buildings with your path <br> <br> <img src="https://cdn.orbitalplatforms.com/blog/sd-media/2023-02/image_63f889ed6d9959_35158070.jpg?ooMediaId=10670">',
+  'find a place where darkness grows <br> <br> <img src="https://d2w9rnfcy7mm78.cloudfront.net/23260927/original_65978f4baa1b60bf084a1f9099848be7.jpg?1692661171?bc=0">',
+  'reach the third streetlight <br> <br> <img src="https://d2w9rnfcy7mm78.cloudfront.net/18039866/original_1718c00048925f48b0b5e053da4ef493.jpg?1663116670?bc=0" alt="">',
+  'use the parallax to smash a man-made object into a natural one <br><br> <img src="https://www.researchgate.net/publication/338535057/figure/fig1/AS:862116818976769@1582556075208/Examples-of-Parallax-in-visual-experience-a-parallax-error-b-binocular-parallax.ppm" alt=""> ',
+  'find a crack in the ground <br> <br> <img src="https://www.researchgate.net/publication/356737912/figure/fig4/AS:1098391069179909@1638888246911/Transverse-crack-of-road-pavement-Source-7.png">',
+  'the next thing that could touch your nose <br><br> <img src="https://as1.ftcdn.net/v2/jpg/03/52/48/36/1000_F_352483676_r2TtNGfOxfTXYwm7JGaioTE0khYzl65S.jpg">',
+  'end where you start to see repitition <br> <br> <img src="https://t3.ftcdn.net/jpg/04/76/58/56/360_F_476585679_8uq5ChkQXich5U8I8DnyhVJ4Kn8c5boU.jpg">',
+  'spot some litter <br> <br> <img src="https://washingtonstatestandard.com/wp-content/uploads/2023/09/IMG_0166-scaled.jpg">'
+  ]
+
+  function pickPrompt()
+  {
+    document.getElementById("prompt").innerHTML = promptList[Math.floor(Math.random() * promptList.length)];
+  }
+
+pickPrompt();
+
+  </script>
+
+</html>
