@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="old_index.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>refuge for our folly</title>
+
+
+        <style media="screen">
+
+@font-face {
+  font-family: clarendonBold;
+  src: url(fonts/Clarendon-Bold.woff);
+}
+@font-face {
+  font-family: clarendonlight;
+  src: url(fonts/Clarendon-Light.woff);
+}
+
+*
+{
+  font-size: 1.3em;
+}
+
+p
+{
+  font-family: arial;
+  color: #1b1b1b;
+
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1
+{
+  font-size: 9rem;
+  color: #1b1b1b;
+  font-family: clarendonBold;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  font-family: clarendonBold, arial;
+  position: sticky;
+  top:0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+
+  /*height width */
+
+}
+
+.fstuff
+{
+  background-color: rgba(0,0,0,0);
+  height:auto;
+  flex: 1;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+ padding: 14px 16px;
+  /*  font-size: 17px; */
+  text-decoration: none;
+  font-size: 1.3rem;
+
+
+}
+
+.topnav a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #000;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+ padding: 6px;
+  margin-top: 8px;
+  /*font-size: 17px;*/
+  font-size: 1.3rem;
+
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  /*font-size: 17px; */
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  background: rgb(0,0,0,0);
+  color: #fff;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+
+
+.item1
+{
+	/*grid-area: header; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  top: 0;
+  background-color: #fbfbfb; /*was once #b1331b */
+  line-height: .9;
+}
+
+.item3
+{
+  grid-area: main;
+  height: 100vh;
+  background-color: #000;
+
+}
+.item4
+{
+  grid-area: right;
+  height: 100vh;
+  background-color: #fbfbfb; /*was once #b1331b */
+  border: 0px;
+ }
+.item5
+{
+  grid-area: left;
+  height: 100vh;
+  background-color: #fbfbfb; /*was once #b1331b */
+  border: 0px;
+}
+
+.item6
+{
+  grid-area: contact;
+  height: 75vh;
+  background-color: #000;
+}
+
+.item7
+{
+  grid-area: footer;
+  height: 25vh;
+  background-color: #333;
+}
+
+
+
+.kb
+{
+
+   color: #1b1b1b;
+   font-family: arial;
+   font-size: 10vh;
+   margin:0;
+   border:0;
+   height: 10vh;
+
+   /*line-height: 113px; */
+}
+
+
+.subt
+{
+
+   color: #1b1b1b;
+   font-family: arial;
+   justify-items: stretch;
+   font-size: 5vh;
+   height: 5vh;
+   margin:0;
+   border:0;
+   /*line-height: 113px; */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+/*  'header header ' */
+  'main main'
+  'left right'
+  'contact contact'
+  'footer footer'
+  ;
+  grid-gap: 0px;
+
+
+}
+
+
+
+
+body
+{
+
+  background-color: #333;
+
+}
+
+.grid-container p
+{
+  font-family: arial;
+  color: #ffffff;
+  font-size: 1.3rem;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 5em;
+  margin-right: 5em;
+
+
+
+}
+
+.grid-container a
+{
+
+  color: #000000;
+  text-decoration: none;
+}
+
+        </style>
+
+    </head>
+    <body>
+
+
+        <div class="item1">
+
+                  <div class="kb">KEN BASCO  </div>
+                  <div class="subt">site underconstruction</div>
+
+                  <div class="fstuff">
+
+                    <canvas> </canvas>
+                    <script src="canvas.js"> </script>
+
+                  </div>
+
+        </div>
+
+        <div class="topnav">
+          <a class="active" href="#home">home</a>
+          <a href="#info">info</a>
+          <a href="https://docs.google.com/document/d/1lFt5zSI8G_V6UukFstQeJd4ahjfTbXRUliKZdJq7buM/edit?usp=sharing">deez</a>
+          <a href="https://twitter.com/kenbasco">mail</a>
+
+          <div class="search-container">
+            <form onsubmit="return doSearch(event)">
+              <input type="text"  id="userInput">
+              <button type="submit"  ><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+
+
+    <div class="grid-container">  <!--container for the grid -->
+        <div class="item3">
+          <h1>About</h1>
+          <p>
+            My name is Kenneth Basco. I am a spring 2019 graduate of Rutgers University. My undergraduate degree is a major in ITI (Information Technology and Informatics) with a specialization in Game Production and Innovation as well as a minor in Computer Science.
+
+          I mediate the relationship between people and information technologies.  This ranges from technical support to the prototyping and development of your next product. I’m interested in how information is represented, and consumed by its audience. Sometimes it’s a two-way street.
+
+          My work includes but is not limited to games, zines, instructional materials, scripts, websites, product descriptions, user interfaces, meditative vignettes, and CAD drawings.
+          I am a strong believer in work that creates itself, transcending deliverables that take new meaning and interpretation.
+
+          </p>
+
+        </div>
+        <div class="item4">
+
+
+
+
+        </div>
+        <div class="item5">
+
+            <h1>Work</h1>
+
+
+              <p>
+                    I'm still working on this part too. <br> In the mean time, here's something <a href="https://drive.google.com/file/d/1E06AUxR796o_m2I-ChNXMIfDdlIFziKM/view?usp=sharing">artsy </a>
+                    <br> Here's something <a href="https://itishowcase.rutgers.edu/project/street-smarts-0">professional </a>
+                    <br> <br> I also take <a href="https://www.kihapp.com/categories/503029">risks and hits </a>
+
+
+
+
+              </p>
+
+        </div>
+
+        <div class="item6">
+
+          <h1>Contact</h1>
+
+          <p>
+
+            @kenbasco <br>
+            kenneth.basco@rutgers.edu <br>
+             <br>
+
+
+
+
+          </p>
+
+        </div>
+
+        <div class="item7">
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+    <footer> 2019 | Kenneth Basco | &#127279 knaveHaven </footer>
+</html>

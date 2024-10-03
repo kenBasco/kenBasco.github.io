@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+
+    @font-face {
+      font-family: "clarendonBold";
+      src: url(fonts/Clarendon-Bold.otf);
+    }
+
+    @font-face {
+      font-family: "clarendonheavy";
+      src: url(fonts/clarendon-heavy.otf);
+    }
+
+    @font-face {
+      font-family: "clarendon";
+      src: url(fonts/Clarendon-Regular.otf);
+    }
+      *
+      {
+        margin: 0;
+        padding: 0;
+        font-family: "clarendon",Arial;
+      }
+      body  {
+        font-size: 1.3em;
+
+        margin: 0 auto;
+        width:800px;
+
+      }
+
+      header
+      {
+          height: 100vh;
+      }
+
+      h1
+      {
+        font-size: 2em;
+      }
+
+      h2
+      {
+        font-size: 1.5em;
+
+      }
+
+      p
+      {
+
+      }
+
+      nav
+      {
+        overflow:hidden;
+        background-color: #333;
+        color: #fff;
+
+        font-family: clarendonBold, arial;
+        position: sticky;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      nav a
+      {
+        color: white;
+        float: left;
+        display: block;  <!-- was block -->
+        color: #fff;
+        text-align: center;
+        bottom: 0;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 1.6rem;
+
+      }
+
+      nav a:hover
+      {
+        background-color: #fff;
+        color: black;
+      }
+
+      nav details
+      {
+        display: none;
+      }
+
+
+  #searchbar input[type=text]
+  {
+
+
+
+    font-size: 1.3rem;
+    width:230px;
+    padding: 5px 0px 0px 0px; /* up left bottom right*/
+
+    border: none;
+
+  /* margin-right: 16px; */
+
+
+}
+
+button:hover
+{
+ background-color:white;
+ fill:black;
+ stroke:black;
+ stroke-width: thick;
+}
+
+
+button
+{
+  display: inline-block;
+
+  padding: 6px;
+
+  border: none;
+  /* margin-right: 16px; */
+  background-color: inherit;
+  stroke:none;
+  fill:white;
+  padding: 14px 13px;
+
+}
+
+form{
+  display: block;
+  float: right;
+
+  margin-right: 16px;
+  overflow: hidden;
+  font-size: 1.6rem;
+
+  padding: 0;
+
+}
+
+
+
+main
+{
+
+}
+
+
+
+
+section
+{
+  height:100vh;
+  overflow: hidden;
+
+}
+
+section:nth-child(odd)
+{
+    background-color: black;
+    color:white;
+
+
+}
+
+section:nth-child(even)
+{
+    background-color: white;
+    color: black;
+
+
+}
+
+section   *
+{
+  padding:   1.6rem;
+  padding-bottom: 0;
+  display: inline-block;
+
+}
+
+footer{
+
+  align: center;
+  background-color: #333;
+  color: white;
+  text-align: center;
+
+}
+
+
+#tab1
+{
+  color:red;
+  display:none;
+}
+#tab1:target
+{
+  display:block;
+}
+#tab2
+{
+  display:none;
+}
+#tab2:target
+{
+  display:block;
+}
+#tab3
+{
+  display:none;
+}
+#tab3:target
+{
+  display:block;
+}
+/*superr rad net.art idea: have a webpage where links/content disappears.
+this will worked with the a:visited psuedo class*/
+
+.halfscreen
+{
+  float: left;
+  width: 50%;
+}
+
+.halfscreen-r
+{
+  float: right;
+  width: 50%;
+}
+
+
+img
+{
+
+  width: 30%;
+
+  float: right;
+
+
+}
+
+@media screen and (max-width: 600px)
+{
+  body
+  {
+    background-color: #b13;
+    color: white;
+    font-size: 1em;
+    width: auto;
+
+  }
+
+section{
+  margin: 0;
+}
+
+/*
+  nav > a
+  {
+      display: none;
+
+  }
+
+  nav > form
+  {
+    display: none;
+  }
+
+  nav > button{
+    display: none;
+  }
+
+
+
+  nav details > a
+  {
+    float: none;
+
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  nav details form
+  {
+      float: left;
+      font-size: 1.6rem;
+      padding: 14px 16px;
+
+  }
+
+  */
+
+
+  #searchbar input[type=text]
+  {
+    width: 50vw;
+  /* margin-right: 16px; */
+}
+
+
+
+  nav > a, form
+  {
+    display: none
+  }
+
+
+  nav  details
+  {
+      display: block;
+      font-size: 1.6rem;
+      padding: 14px 16px;
+
+  }
+
+  nav details a{
+
+    display: block;
+    text-align: left;
+    width: 100%;
+
+    /*
+
+    margin: 0px 0px 0 0px ; up right down left
+    padding: 14px 0px 14px 0px;
+     */
+
+  }
+
+  nav details form{
+    display: block;
+    float: left;
+  }
+
+  details summary {
+  cursor: pointer;
+}
+
+  nav details summary > *
+  {
+    display: inline;
+  }
+
+  .halfscreen
+  {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .halfscreen-r
+  {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .halfscreen > p
+  {
+
+
+  }
+
+  img
+  {
+    width: 100%;
+
+
+
+
+  }
+
+
+
+
+}
+
+
+    </style>
+
+  </head>
+  <body>
+
+<header>
+
+
+  <h1>knaveHaven</h1>
+  <p>a refuge for our foolishness</p>
+  <!--
+  <p>an information practice exploring the interplay between digital and physical environments</p>
+-->
+
+
+</header>
+
+
+
+    <nav>
+      <a class="active" href="./index.html">home</a>
+      <a href="./info.html">info</a>
+      <a href="./work.html">work</a>
+
+      <form id="searchbar" onsubmit="return doSearch(event)">
+        <input type="text"  id="userInput">
+   <button id="search-submit-button" type="submit"  >
+
+<!--
+
+     <i class="fa fa-search"></i>
+
+   -->
+
+     <!-- License: CC Attribution. Made by geakstr: https://github.com/geakstr/entypo-icons -->
+<svg width="1.6rem" height="1.6rem" viewBox="0 0 20 20" >
+
+  <path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z">
+
+</svg>
+
+
+   </button>
+      </form>
+
+      <details>
+        <summary>
+
+        </summary>
+
+        <a class="active" href="./index.html">home</a>
+        <a href="./info.html">info</a>
+        <a href="./work.html">work</a>
+
+        <form id="searchbar" onsubmit="return doSearch(event)">
+          <input type="text"  id="userInput">
+     <button id="search-submit-button" type="submit"  >
+
+  <!--
+
+       <i class="fa fa-search"></i>
+
+     -->
+
+       <!-- License: CC Attribution. Made by geakstr: https://github.com/geakstr/entypo-icons -->
+  <svg width="1.6rem" height="1.6rem" viewBox="0 0 20 20" >
+
+    <path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z">
+
+  </svg>
+
+
+     </button>
+        </form>
+
+
+
+
+          </details>
+
+    </nav>
+
+    <main>
+
+      <section style="margin:0;">
+
+        <div role=none class="halfscreen" >
+          <h2>perspective</h2>
+
+          <p>day to day environments demand us to interact with information in ways dictated by others</p>
+
+              <p>but when do we make room for ourselves?</p>
+              <p> where does our intention lie?</p>
+
+
+        </div>
+
+          <img src="pics/designer_era_1.png" alt="">
+
+
+
+
+      </section>
+
+      <section>
+
+
+      <div class="halfscreen-r">
+
+        <h2>mission</h2>
+        <p>
+          we are an information practice that supports intentional relationships between
+        people, media, and technology. <br> <br>
+
+          our work explores reclaiming our material experiences alongside our digital ones
+        </p>
+      </div>
+
+
+
+      </section>
+
+      <section>
+
+        <div class="halfscreen">
+
+          <h2>collaborate with us</h2>
+
+
+          <p> we believe in personal solutions that work best for you rather than a one size fits all approach</p>
+          <p>email us at knavehaven@gmail.com to schedule a 30 minute consultation call</p>
+
+        </div>
+
+      </section>
+
+
+
+    </main>
+    <footer>
+    <p> 2019 | ken basco | knaveHaven  &#127279;</p>
+    </footer>
+  </body>
+</html>

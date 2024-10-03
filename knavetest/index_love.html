@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+
+
+
+      *
+      {
+        margin: 0;
+        padding: 0;
+      }
+
+
+
+      body  {
+
+        font-size: 1.3em
+
+      }
+
+      header
+      {
+          height: 100vh;
+      }
+
+      h1
+      {
+        font-size: 2em;
+      }
+
+      h2
+      {
+        font-size: 1.5em;
+      }
+
+      p
+      {
+        width: 50vw;
+      }
+
+      nav
+      {
+        overflow:hidden;
+        background-color: #333;
+        color: #fff;
+
+        font-family: clarendonBold, arial;
+        position: sticky;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      nav a
+      {
+        color: white;
+        float: left;
+        display: block;  <!-- was block -->
+        color: #fff;
+        text-align: center;
+        bottom: 0;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 1.6rem;
+
+      }
+
+      nav a:hover
+      {
+        background-color: #fff;
+        color: black;
+      }
+
+      nav details
+      {
+        display: none;
+      }
+
+
+  #searchbar input[type=text]
+  {
+
+
+
+    font-size: 1.3rem;
+    padding: 5px 0px 0px 0px; /* up left bottom right*/
+
+
+    border: none;
+
+
+
+  /* margin-right: 16px; */
+
+
+}
+
+button:hover
+{
+ background-color:white;
+ fill:black;
+ stroke:black;
+ stroke-width: thick;
+}
+
+
+button
+{
+  display: inline-block;
+
+  padding: 6px;
+
+  border: none;
+
+
+  /* margin-right: 16px; */
+
+
+  background-color: inherit;
+  stroke:none;
+  fill:white;
+  padding: 14px 13px;
+
+}
+
+
+
+form{
+  display: block;
+  float: right;
+
+  margin-right: 16px;
+  overflow: hidden;
+  font-size: 1.6rem;
+
+  padding: 0;
+
+
+
+}
+
+
+
+main
+{
+
+}
+
+
+section
+{
+  height:100vh;
+  overflow: hidden;
+}
+
+section:nth-child(odd)
+{
+    background-color: black;
+    color:white;
+}
+
+section:nth-child(even)
+{
+    background-color: white;
+    color: black;
+}
+
+section  *
+{
+  padding:  1.6rem;
+
+}
+
+footer{
+
+  align: center;
+  background-color: #333;
+  color: white;
+  text-align: center;
+
+}
+
+@media screen and (max-width: 600px)
+{
+  body
+  {
+    background-color: #b13;
+    color: white;
+  }
+
+  p
+  {
+    width: auto;
+  }
+
+
+/*
+  nav > a
+  {
+      display: none;
+
+  }
+
+  nav > form
+  {
+    display: none;
+  }
+
+  nav > button{
+    display: none;
+  }
+
+
+
+  nav details > a
+  {
+    float: none;
+
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  nav details form
+  {
+      float: left;
+      font-size: 1.6rem;
+      padding: 14px 16px;
+
+  }
+
+  */
+
+
+  #searchbar input[type=text]
+  {
+
+
+    width: 50vw;
+
+
+
+
+
+
+  /* margin-right: 16px; */
+
+
+}
+
+
+
+  nav > a, form
+  {
+
+
+    display: none
+  }
+
+
+  nav  details
+  {
+      display: block;
+      font-size: 1.6rem;
+      padding: 14px 16px;
+
+  }
+
+  nav details a{
+
+    display: block;
+    text-align: left;
+    width: 100%;
+
+    /*
+
+    margin: 0px 0px 0 0px ; up right down left
+    padding: 14px 0px 14px 0px;
+     */
+
+
+
+
+  }
+
+  nav details form{
+    display: block;
+    float: left;
+  }
+
+  details summary {
+  cursor: pointer;
+}
+
+  nav details summary > *
+  {
+    display: inline;
+  }
+
+}
+
+
+    </style>
+
+  </head>
+  <body>
+
+<header>
+
+
+  <h1>knaveHaven</h1>
+  <p>site under construction</p>
+
+</header>
+
+
+
+    <nav>
+      <a class="active" href="./index.html">home</a>
+      <a href="./info.html">info</a>
+      <a href="./work.html">work</a>
+
+      <form id="searchbar" onsubmit="return doSearch(event)">
+        <input type="text"  id="userInput">
+   <button id="search-submit-button" type="submit"  >
+
+<!--
+
+     <i class="fa fa-search"></i>
+
+   -->
+
+     <!-- License: CC Attribution. Made by geakstr: https://github.com/geakstr/entypo-icons -->
+<svg width="1.6rem" height="1.6rem" viewBox="0 0 20 20" >
+
+  <path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z">
+
+</svg>
+
+
+   </button>
+      </form>
+
+      <details>
+        <summary>
+
+        </summary>
+
+        <a class="active" href="./index.html">home</a>
+        <a href="./info.html">info</a>
+        <a href="./work.html">work</a>
+
+        <form id="searchbar" onsubmit="return doSearch(event)">
+          <input type="text"  id="userInput">
+     <button id="search-submit-button" type="submit"  >
+
+  <!--
+
+       <i class="fa fa-search"></i>
+
+     -->
+
+       <!-- License: CC Attribution. Made by geakstr: https://github.com/geakstr/entypo-icons -->
+  <svg width="1.6rem" height="1.6rem" viewBox="0 0 20 20" >
+
+    <path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z">
+
+  </svg>
+
+
+     </button>
+        </form>
+
+
+
+
+          </details>
+
+    </nav>
+
+    <main>
+
+      <section>
+        <h2>about</h2>
+        <p>we are an information practice that explores the interplay between digital and physical environments</p>
+
+          <p>image goes here?</p>
+
+
+
+
+      </section>
+
+      <section>
+        <h2>mission</h2>
+
+        <!--
+        information is overwhelming these days
+
+
+        -->
+
+    <p>our day to day environments (e.g., social media, work, school) demand us to engage with information</p>
+
+
+        <p>in a world where so much content is presented to us by others, when do we make sense of things for our own needs?</p>
+
+        <a href="#tab1">tab 1</a>
+        <a href="#tab2">tab 2</a>
+        <a href="#tab3">tab3</a>
+      
+        <p id="tab1">
+          tab 1 content
+        </p>
+        <p id="tab2">tab 2 content</p>
+        <p id="tab3">tab 3 content</p>
+
+<!--
+        <p>various net art discussing relationships between people, institutions, and information, but we also collaborate with individuals on IT solutions that fit their needs </p>
+    <p>, ia3, composure, onside, photosorter, home/personal solutions, immersive reader, diescussion</p> -->
+
+
+<!--
+          <ul>
+            <li>scrap paper</li>
+            <li>ia3 citing manager</li>
+            <li>composure</li>
+            <li>onside</li>
+          </ul>
+-->
+
+
+      <!--  <p>instructional design work: digital notebook, email activities, accessibility stuff, TOWN activity, Emoji activity, html interactive modules</p> -->
+      </section>
+
+      <section>
+        <h2>idea for a project? let's chat</h2>
+
+        <p> we believe in personal solutions that work best for you rather than a one size fits all approach</p>
+        <p>the first 30 minute consultation call is free</p>
+
+      </section>
+
+    </main>
+    <footer>
+    <p> 2024 | ken basco | knaveHaven  &#127279;</p>
+    </footer>
+  </body>
+</html>
