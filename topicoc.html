@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+     <meta name="description" content="multimedia design consulting collective">
+     <meta name="keywords" content="net.art, instructional design, pedagogy, consulting, alternative, marginal, fringe">
+     <meta name="author" content="ken basco, staoue, knaveHaven">
+    <title>topics for les to think about</title>
+    <style media="screen">
+      body
+      {
+        background-color: #f7766a;
+        color: black;
+        font-family: arial;
+      }
+      main
+      {
+        margin: 0 auto;
+        width: 80%;
+        font-size: 1.6em;
+        border-radius: 30px;
+        padding: 20px;
+        background-color: white;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+<main>
+  <h1>topics to think about</h1>
+
+  <strong>this document is alive</strong>
+
+  <p>you do not have to think about all the topics in this document. the topics listed will change throughout the day anyway, so feel free to revisit what to think about.</p>
+
+<h2>peripheral topics</h2>
+
+<ul contenteditable="true">
+  <li id = "houritem">bells</li>
+  <li id = "minuteitem">spray bottles</li>
+  <li id = "secondsitem">ascots</li>
+</ul>
+
+
+
+  <script type="text/javascript">
+
+    var hourList = [
+    'sounds','candles','chairs','haircuts','sports','signs' ]
+
+    var minuteList = [
+    'your skeleton','posture','drawing','weather','parties','eyecontact' ]
+
+    var secondsList = [
+    'IT support','TV programming blocks','autorepair','trains','narrative medicine','grooming pets' ]
+
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+
+    document.getElementById("houritem").innerHTML = hourList[(hours%6)];
+    document.getElementById("minuteitem").innerHTML = minuteList[(minutes%6)];
+    document.getElementById("secondsitem").innerHTML = secondsList[(seconds%6)];
+
+    if (hours < 12) {
+
+        document.body.style.backgroundColor = "#f7766a";
+
+
+    }
+    else {
+
+      document.body.style.backgroundColor = "#ADD8E6";
+
+    }
+
+
+    </script>
+
+
+
+<h2>conditional topics</h2>
+
+<p>click on the collapsible to reveal what to think about once its respective condition has been met</p>
+
+<details>
+  <summary>among shadows and light</summary>
+  <p>
+    attend to the shadows, and the borders of where they end and begin. how would you depict the dithering of its edges?
+  </p>
+</details>
+
+<details>
+  <summary>when you are using a daily interface(e.g. a program, application, reading material you use everyday)</summary>
+  <p>
+    if you could put anything in the margins, what would you put?
+  </p>
+</details>
+
+<details>
+  <summary>after you saw/heard something you didn't like</summary>
+  <p>
+    think about a quality that you do not like about a person, imagine a world where you had that quality. what factors/things in that world facilitate you having this quality?
+  </p>
+</details>
+
+
+
+<details>
+  <summary>if you see someone running</summary>
+  <p>
+    if you could be good at any action from a sport, what would you choose? (e.g., throwing, pulling, striding, etc.)
+  </p>
+</details>
+
+
+
+  <!--
+
+  <h2>overarching topic</h2>
+
+  <p>what is the silence you make out of noise?</p>
+-->
+
+  <h2>meta topic</h2>
+
+  <p>if the duration of this day had a thumbnail, what would it look like?</p>
+
+  <textarea id="note area" name="notes" rows="5" cols="30">
+
+</textarea>
+
+
+</main>
+
+
+
+  </body>
+</html>
